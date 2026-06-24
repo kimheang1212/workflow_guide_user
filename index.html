@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Care Management System - General Functions Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Compact Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="system-name">Customer Care Management System</h1>
+                <p class="page-title">មុខងារទូទៅ / General Functions Guide</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <!-- Category: General Functions (Expandable) -->
+            <div class="sidebar-category">
+                <button class="category-toggle" onclick="toggleCategory(this)">
+                    <span class="category-icon">⚙️</span>
+                    <span class="category-text">
+                        <span class="category-khmer">មុខងារទូទៅ</span>
+                        <span class="category-english">General Functions</span>
+                    </span>
+                    <span class="toggle-arrow">▼</span>
+                </button>
+                <ul class="sidebar-menu" id="generalFunctionsMenu">
+                    <li>
+                        <a href="#top-navigation" class="nav-link active">
+                            <span class="menu-icon">🔝</span>
+                            <span class="nav-text">
+                                <span class="nav-khmer">រូបតំណាងផ្នែកខាងលើ</span>
+                                <span class="nav-english">Top Navigation Icons</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#appearance-settings" class="nav-link">
+                            <span class="menu-icon">🎨</span>
+                            <span class="nav-text">
+                                <span class="nav-khmer">ការកំណត់រូបរាង</span>
+                                <span class="nav-english">Appearance</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#theme-color" class="nav-link">
+                            <span class="menu-icon">🌈</span>
+                            <span class="nav-text">
+                                <span class="nav-khmer">ពណ៌រូបរាង</span>
+                                <span class="nav-english">Theme Color</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#full-screen" class="nav-link">
+                            <span class="menu-icon">🖥️</span>
+                            <span class="nav-text">
+                                <span class="nav-khmer">ពេញអេក្រង់</span>
+                                <span class="nav-english">Full Screen</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#notifications" class="nav-link">
+                            <span class="menu-icon">🔔</span>
+                            <span class="nav-text">
+                                <span class="nav-khmer">ការជូនដំណឹង</span>
+                                <span class="nav-english">Notifications</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#user-profile" class="nav-link">
+                            <span class="menu-icon">👤</span>
+                            <span class="nav-text">
+                                <span class="nav-khmer">គណនីអ្នកប្រើប្រាស់</span>
+                                <span class="nav-english">User Profile</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Company Submenu -->
+                <div class="submenu-container">
+                    <button class="submenu-toggle" onclick="toggleSubmenu(this)">
+                        <span class="submenu-icon">🏢</span>
+                        <span class="submenu-text">
+                            <span class="submenu-khmer">ក្រុមហ៊ុន</span>
+                            <span class="submenu-english">Company</span>
+                        </span>
+                        <span class="submenu-arrow">▶</span>
+                    </button>
+                    <ul class="submenu" id="companySubmenu">
+                        <li>
+                            <a href="#company" class="nav-link">
+                                <span class="menu-icon">🏢</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">ក្រុមហ៊ុន</span>
+                                    <span class="nav-english">Company</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#branch" class="nav-link">
+                                <span class="menu-icon">🏪</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">សាខា</span>
+                                    <span class="nav-english">Branch</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <span class="toggle-icon">☰</span>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="#" class="breadcrumb-item">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="#" class="breadcrumb-item">Documentation</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-item active">General Functions</span>
+        </nav>
+
+        <!-- Page Introduction -->
+        <section class="page-intro">
+            <h1 class="page-heading">
+                <span class="heading-khmer">មុខងារទូទៅ</span>
+                <span class="heading-english">General Functions Guide</span>
+            </h1>
+            <p class="intro-text">
+                <span class="text-khmer">មគ្គុម្មប្រព័ន្ធនេះជួយអ្នកប្រើប្រាស់យល់ពីមុខងារទូទៅទាំងអស់នៃប្រព័ន្ធ និងវិធីប្រើប្រាស់។</span>
+                <span class="text-english">This guide helps users understand all general functions of the system and how to use them effectively.</span>
+            </p>
+        </section>
+
+        <!-- Function Guide Section -->
+        <section id="top-navigation" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🔝</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">រូបតំណាងមុខងារនៅផ្នែកខាងលើ</span>
+                        <span class="title-english">Top Navigation Function Icons</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">រូបភាពនេះបង្ហាញពីរូបតំណាងមុខងារសំខាន់ៗនៅផ្នែកខាងលើខាងស្តាំនៃប្រព័ន្ធ។</span>
+                        <span class="desc-english">This screenshot shows the important function icons in the top-right navigation area.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Function Cards Grid -->
+            <div class="function-cards">
+                <div class="function-card">
+                    <div class="card-header">
+                        <span class="card-icon">🎨</span>
+                        <div class="card-title-group">
+                            <h3 class="card-title-khmer">ការកំណត់រូបរាង</h3>
+                            <h4 class="card-title-english">Appearance</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-row">
+                            <span class="info-label">គោលបំណង / Purpose:</span>
+                            <span class="info-value">កំណត់ទម្រង់បង្ហាញប្រព័ន្ធ / Change system display mode</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">វិធីប្រើ / How to Use:</span>
+                            <span class="info-value">ជ្រើសរើសស្វ័យប្រវត្តិ ទម្រង់ភ្លឺ ឬទម្រង់ងងឹត / Select Auto, Light, or Dark</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="function-card">
+                    <div class="card-header">
+                        <span class="card-icon">🌈</span>
+                        <div class="card-title-group">
+                            <h3 class="card-title-khmer">ពណ៌រូបរាង</h3>
+                            <h4 class="card-title-english">Theme Color</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-row">
+                            <span class="info-label">គោលបំណង / Purpose:</span>
+                            <span class="info-value">ផ្លាស់ប្តូរពណ៌រូបរាងសំខាន់ / Change accent color</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">វិធីប្រើ / How to Use:</span>
+                            <span class="info-value">ជ្រើសរើសពណ៌ពីបញ្ជី / Select color from palette</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="function-card">
+                    <div class="card-header">
+                        <span class="card-icon">🖥️</span>
+                        <div class="card-title-group">
+                            <h3 class="card-title-khmer">ពេញអេក្រង់</h3>
+                            <h4 class="card-title-english">Full Screen</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-row">
+                            <span class="info-label">គោលបំណង / Purpose:</span>
+                            <span class="info-value">បើក/បិទរបៀបពេញអេក្រង់ / Toggle full-screen mode</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">វិធីប្រើ / How to Use:</span>
+                            <span class="info-value">ចុចដើម្បីបើក ឬចុច Esc ដើម្បីបិទ / Click to enable or press Esc to exit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="function-card">
+                    <div class="card-header">
+                        <span class="card-icon">🔔</span>
+                        <div class="card-title-group">
+                            <h3 class="card-title-khmer">ការជូនដំណឹង</h3>
+                            <h4 class="card-title-english">Notifications</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-row">
+                            <span class="info-label">គោលបំណង / Purpose:</span>
+                            <span class="info-value">មើលការជូនដំណឹងទាំងអស់ / View all notifications</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">វិធីប្រើ / How to Use:</span>
+                            <span class="info-value">ចុចដើម្បីមើល ស្វែងរក និងបិទ / Click to view, search, and close</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="function-card">
+                    <div class="card-header">
+                        <span class="card-icon">🌐</span>
+                        <div class="card-title-group">
+                            <h3 class="card-title-khmer">ភាសា</h3>
+                            <h4 class="card-title-english">Language</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-row">
+                            <span class="info-label">គោលបំណង / Purpose:</span>
+                            <span class="info-value">ប្តូរភាសាប្រព័ន្ធ / Switch system language</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">វិធីប្រើ / How to Use:</span>
+                            <span class="info-value">ជ្រើសរើសភាសាខ្មែរ ឬអង់គ្លេស / Select Khmer or English</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="function-card">
+                    <div class="card-header">
+                        <span class="card-icon">⚙️</span>
+                        <div class="card-title-group">
+                            <h3 class="card-title-khmer">ការកំណត់</h3>
+                            <h4 class="card-title-english">Settings</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-row">
+                            <span class="info-label">គោលបំណង / Purpose:</span>
+                            <span class="info-value">កំណត់រចនាសម្ព័ន្ធប្រព័ន្ធ / Manage system configuration</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">វិធីប្រើ / How to Use:</span>
+                            <span class="info-value">ចុចដើម្បីបើកទំព័រកំណត់ / Click to open settings page</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="function-card">
+                    <div class="card-header">
+                        <span class="card-icon">👤</span>
+                        <div class="card-title-group">
+                            <h3 class="card-title-khmer">គណនីអ្នកប្រើប្រាស់</h3>
+                            <h4 class="card-title-english">User Profile</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-row">
+                            <span class="info-label">គោលបំណង / Purpose:</span>
+                            <span class="info-value">មើលព័ត៌មានគណនី / View account information</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">វិធីប្រើ / How to Use:</span>
+                            <span class="info-value">ចុចដើម្បីមើល និងកំណត់ / Click to view and manage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshot Card -->
+        <section class="content-section">
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">រូបតំណាងមុខងារនៅផ្នែកខាងលើ</span>
+                        <span class="title-english">Top Navigation Function Icons</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/Untitled.png" alt="Top Navigation Icons" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="screenshot-caption">
+                        <p>
+                            <span class="text-khmer">រូបភាពនេះបង្ហាញពីរូបតំណាងមុខងារសំខាន់ៗនៅផ្នែកខាងលើខាងស្តាំនៃប្រព័ន្ធ។</span>
+                            <span class="text-english">This screenshot shows the important function icons in the top-right navigation area of the system.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appearance Settings Section -->
+        <section id="appearance-settings" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🎨</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">ការកំណត់រូបរាង</span>
+                        <span class="title-english">Appearance</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">ផ្លាស់ប្តូរទម្រង់បង្ហាញរបស់ប្រព័ន្ធ។ អ្នកប្រើប្រាស់អាចជ្រើសរើសបានតែ៖</span>
+                        <span class="desc-english">Change the system display mode. Users can only select:</span>
+                    </p>
+                    <ul class="mode-options">
+                        <li>
+                            <span class="text-khmer">ស្វ័យប្រវត្តិ (Auto)</span>
+                            <span class="text-english">Auto</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ទម្រង់ភ្លឺ (Light)</span>
+                            <span class="text-english">Light</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ទម្រង់ងងឹត (Dark)</span>
+                            <span class="text-english">Dark</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បើកការកំណត់រូបរាង</span>
+                            <span class="content-english">Open Appearance Settings</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើរូបតំណាង <strong>Appearance</strong> នៅផ្នែកខាងលើខាងស្តាំ។</span>
+                            <span class="text-english">Click the <strong>Appearance</strong> icon in the top navigation.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ជ្រើសរើសទម្រង់ភ្លឺ</span>
+                            <span class="content-english">Select Light Mode (Example)</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ជ្រើសរើស <strong>ទម្រង់ភ្លឺ</strong> ឬ <strong>Light</strong> ពីបញ្ជី។ អ្នកអាចជ្រើសរើស <strong>ស្វ័យប្រវត្តិ</strong> (Auto) ឬ <strong>ទម្រង់ងងឹត</strong> (Dark) ដោយរបៀបដូចគ្នា។</span>
+                            <span class="text-english">Select <strong>Light</strong> from the options. You can select <strong>Auto</strong> or <strong>Dark</strong> in the same way.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ការកំណត់រក្សាទុកដោយស្វ័យប្រវត្តិ</span>
+                            <span class="content-english">Settings Save Automatically</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ប្រព័ន្ធនឹងអនុវត្តនិងរក្សាទុកទម្រង់បង្ហាញដែលបានជ្រើសរើសដោយស្វ័យប្រវត្តិ។</span>
+                            <span class="text-english">The system applies and saves the selected display mode automatically.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">🖼️</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ការកំណត់រូបរាងប្រព័ន្ធ</span>
+                        <span class="title-english">System Appearance Settings</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/company2.jpg" alt="System Appearance Settings" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="screenshot-caption">
+                        <p>
+                            <span class="text-khmer">ទិដ្ឋភាពនៃការកំណត់រូបរាងប្រព័ន្ធដែលបង្ហាញជម្រើស Auto, Light, និង Dark។</span>
+                            <span class="text-english">View of system appearance settings showing Auto, Light, and Dark options.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theme Color Section -->
+        <section id="theme-color" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🌈</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">ពណ៌រូបរាង</span>
+                        <span class="title-english">Theme Color</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">ផ្លាស់ប្តូរពណ៌រូបរាងសំខាន់របស់ប្រព័ន្ធដើម្បីផ្គូផ្គងនឹងចំណង់ចំណូលចិត្តរបស់អ្នក។</span>
+                        <span class="desc-english">Change the system accent color to match your preferences.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បើកការកំណត់ពណ៌</span>
+                            <span class="content-english">Open Color Settings</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើរូបតំណាង <strong>Theme Color</strong> នៅផ្នែកខាងលើ។</span>
+                            <span class="text-english">Click the <strong>Theme Color</strong> icon in the top navigation.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ជ្រើសរើសពណ៌</span>
+                            <span class="content-english">Choose Your Color</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ជ្រើសរើសពណ៌ពីបញ្ជីពណ៌ដែលមាន។</span>
+                            <span class="text-english">Select a color from the available color palette.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ពន្យារពេលកំណត់</span>
+                            <span class="content-english">Apply Changes</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ពណ៌នឹត្រូវអនុវត្តទៅលើម៉ឺនុយ ប៊ូតុង និងធាតុផ្សេងៗ។</span>
+                            <span class="text-english">The color will be applied to menus, buttons, and other elements.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">🖼️</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ពណ៌រូបរាង</span>
+                        <span class="title-english">Theme Color</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/company3.jpg" alt="Theme Color Selection" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="screenshot-caption">
+                        <p>
+                            <span class="text-khmer">ទិដ្ឋភាពនៃការជ្រើសរើសពណ៌រូបរាងជាមួយនឹងជម្រើសពណ៌ផ្សេងៗ។</span>
+                            <span class="text-english">View of theme color selection with various color options.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Screen Section -->
+        <section id="full-screen" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🖥️</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">ពេញអេក្រង់</span>
+                        <span class="title-english">Full Screen Mode</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">បើកឬបិទរបៀបពេញអេក្រង់ដើម្បីមើលបន្ថែម។</span>
+                        <span class="desc-english">Enable or exit full-screen mode for better viewing experience.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចុចដើម្បីបើកពេញអេក្រង់</span>
+                            <span class="content-english">Click to Enter Full Screen</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើរូបតំណាង <strong>Full Screen</strong> ដើម្បីបើករបៀបពេញអេក្រង់។</span>
+                            <span class="text-english">Click the <strong>Full Screen</strong> icon to enter full-screen mode.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បិទពេញអេក្រង់</span>
+                            <span class="content-english">Exit Full Screen</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចម្ដងទៀត ឬចុច <code>Esc</code> ដើម្បីត្រឡប់មកទំហំធម្មតា។</span>
+                            <span class="text-english">Click again or press <code>Esc</code> to return to normal view.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">🖼️</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ពេញអេក្រង់</span>
+                        <span class="title-english">Full Screen</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/company4.jpg" alt="Full Screen Mode" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="screenshot-caption">
+                        <p>
+                            <span class="text-khmer">ទិដ្ឋភាពនៃរបៀបពេញអេក្រង់ក្នុងប្រព័ន្ធ។</span>
+                            <span class="text-english">View of full-screen mode in the system.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notifications Section -->
+        <section id="notifications" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🔔</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">ការជូនដំណឹង</span>
+                        <span class="title-english">Notifications</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មើលនិងគ្រប់គ្រងការជូនដំណឹងទាំងអស់ក្នុងប្រព័ន្ធ។</span>
+                        <span class="desc-english">View and manage all system notifications.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បើកបញ្ជីការជូនដំណឹង</span>
+                            <span class="content-english">Open Notifications Panel</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើរូបតំណាង <strong>Notifications</strong> ដើម្បីមើលការជូនដំណឹងទាំងអស់។</span>
+                            <span class="text-english">Click the <strong>Notifications</strong> icon to view all notifications.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ស្វែងរកនិងមើលលម្អិត</span>
+                            <span class="content-english">Search and View Details</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">អាចស្វែងរកការជូនដំណឹង និងមើលព័ត៌មានលម្អិតបាន។</span>
+                            <span class="text-english">You can search notifications and view detailed information.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បិទបញ្ជី</span>
+                            <span class="content-english">Close Panel</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចដើម្បីបិទបញ្ជីការជូនដំណឹង។</span>
+                            <span class="text-english">Click to close the notifications panel.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">🖼️</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ការជូនដំណឹង</span>
+                        <span class="title-english">Notifications</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/company5.jpg" alt="Notifications Panel" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="screenshot-caption">
+                        <p>
+                            <span class="text-khmer">ទិដ្ឋភាពនៃបញ្ជីការជូនដំណឹងក្នុងប្រព័ន្ធ។</span>
+                            <span class="text-english">View of the notifications panel in the system.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Profile Section -->
+        <section id="user-profile" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">👤</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">គណនីអ្នកប្រើប្រាស់</span>
+                        <span class="title-english">User Profile</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">ចុចលើរូបតំណាងគណនីអ្នកប្រើប្រាស់នៅផ្នែកខាងលើខាងស្តាំ ដើម្បីមើលព័ត៌មានគណនី ការកំណត់ផ្ទាល់ខ្លួន កំណែកម្មវិធី និងចាកចេញពីប្រព័ន្ធ។</span>
+                        <span class="desc-english">Click the User Profile icon in the top-right navigation to view account information, preferences, application version, and sign out.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">គណនីអ្នកប្រើប្រាស់</span>
+                        <span class="title-english">User Profile</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/company6.jpg" alt="User Profile" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Section -->
+        <section id="company" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🏢</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">ក្រុមហ៊ុន</span>
+                        <span class="title-english">Company</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">ផ្នែកក្រុមហ៊ុនប្រើសម្រាប់មើល និងគ្រប់គ្រងព័ត៌មានក្រុមហ៊ុន។ អ្នកប្រើប្រាស់អាចស្វែងរកព័ត៌មានក្រុមហ៊ុនបានយ៉ាងងាយស្រួល។</span>
+                        <span class="desc-english">The Company section is used to view and manage company information. Users can easily search for company records.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ស្វែងរកក្រុមហ៊ុន</span>
+                            <span class="content-english">Search Company</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើម៉ឺនុយ <strong>ក្រុមហ៊ុន > ក្រុមហ៊ុន</strong>។ បញ្ចូលពាក្យគន្លឹះក្នុងប្រអប់ស្វែងរក ដើម្បីស្វែងរកព័ត៌មានក្រុមហ៊ុន ដូចជា លេខកូដ ឈ្មោះ អ៊ីមែល លេខទូរស័ព្ទ ឬអាសយដ្ឋាន។ លទ្ធផលក្នុងតារាងនឹងបង្ហាញតាមពាក្យដែលបានស្វែងរក។</span>
+                            <span class="text-english">Click <strong>Company > Company</strong>. Enter a keyword in the search box to find company information, such as company code, name, email, phone number, or address. The table will show matching results.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">របៀបប្រើប្រាស់</span>
+                            <span class="content-english">How to Use</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">អនុវត្តជំហានទាំងនេះដើម្បីស្វែងរកព័ត៌មានក្រុមហ៊ុន៖</span>
+                            <span class="text-english">Follow these steps to search for company information:</span>
+                        </p>
+                        <ol class="step-list">
+                            <li>
+                                <span class="text-khmer">ចុចលើ <strong>ក្រុមហ៊ុន > ក្រុមហ៊ុន</strong>។</span>
+                                <span class="text-english">Click <strong>Company > Company</strong>.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">បញ្ចូលពាក្យស្វែងរកក្នុងប្រអប់ Search ដូចជា <code>UAT</code>។</span>
+                                <span class="text-english">Enter a keyword in the Search box, such as <code>UAT</code>.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">ពិនិត្យលទ្ធផលក្រុមហ៊ុនដែលបង្ហាញក្នុងតារាង។</span>
+                                <span class="text-english">Review the matching company records displayed in the table.</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ស្វែងរកក្រុមហ៊ុន</span>
+                        <span class="title-english">Search Company</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/company search.jpg" alt="Search Company" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <div class="page-navigation">
+            <a href="#" class="nav-button prev-button">
+                <span class="button-icon">←</span>
+                <span class="button-text">
+                    <span class="text-khmer">ទំព័រមុន</span>
+                    <span class="text-english">Previous Page</span>
+                </span>
+            </a>
+            <a href="#" class="nav-button next-button">
+                <span class="button-text">
+                    <span class="text-khmer">ទំព័របន្ទាប់</span>
+                    <span class="text-english">Next Page</span>
+                </span>
+                <span class="button-icon">→</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="Enlarged view">
+            </div>
+            <div class="modal-controls">
+                <button class="modal-btn" onclick="zoomOut()">−</button>
+                <button class="modal-btn" onclick="resetZoom()">⟲</button>
+                <button class="modal-btn" onclick="zoomIn()">+</button>
+            </div>
+            <div id="modalCaption" class="modal-caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Care Management System - User Documentation</title>
+    <style>
+        /* Import Khmer Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600;700&display=swap');
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --khmer-font: 'Khmer OS Siemreap', 'Khmer OS', 'Battambang', 'Noto Sans Khmer', sans-serif;
+            --english-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #64748b;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-tertiary: #94a3b8;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --sidebar-width: 280px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: var(--english-font);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-secondary);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Khmer Language Font */
+        html[lang="km"] body,
+        html[lang="km"] {
+            font-family: var(--khmer-font);
+            font-size: 1.05rem;
+        }
+
+        html[lang="km"] * {
+            font-family: var(--khmer-font);
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2rem 0;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 0 1.5rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .sidebar-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .sidebar-header p {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        .language-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0 1rem;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            margin-bottom: 0.25rem;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            padding: 3rem 4rem;
+            max-width: 1200px;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 2rem;
+        }
+
+        .section h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+        }
+
+        .section h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Intro Card */
+        .intro-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .lead {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Step Cards */
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateX(5px);
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .step-content ul,
+        .step-content ol {
+            margin-left: 1.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .step-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* Feature Details */
+        .feature-detail {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--success-color);
+            transition: var(--transition);
+        }
+
+        .feature-detail:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateX(5px);
+        }
+
+        .feature-detail h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .feature-detail li {
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .feature-detail strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .section-card:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-icon {
+            font-size: 2rem;
+        }
+
+        .section-header h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .section-body {
+            padding: 2rem;
+        }
+
+        .section-body p {
+            margin-bottom: 1rem;
+        }
+
+        .info-box {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .info-box h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .info-box ul {
+            margin-left: 1.5rem;
+        }
+
+        .info-box li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* Workflow Cards */
+        .workflow-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .workflow-card:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .workflow-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .workflow-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .workflow-step:hover {
+            background: var(--bg-tertiary);
+            transform: translateX(5px);
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .workflow-step p {
+            margin: 0;
+            color: var(--text-secondary);
+            flex: 1;
+        }
+
+        /* Tip Cards */
+        .tip-card {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: var(--transition);
+            border-left: 4px solid var(--warning-color);
+        }
+
+        .tip-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateX(5px);
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .tip-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .tip-content p {
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* FAQ Items */
+        .faq-item {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateX(5px);
+        }
+
+        .faq-item h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .faq-item h3::before {
+            content: "❓";
+            font-size: 1.25rem;
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* Keyboard Shortcuts */
+        kbd {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875em;
+            font-weight: 600;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Footer */
+        .footer {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .footer a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* Image Gallery Styles */
+        .image-gallery {
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .gallery-item:hover {
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-5px);
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+            background: var(--bg-secondary);
+            cursor: pointer;
+        }
+
+        .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-wrapper:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .zoom-icon {
+            background: white;
+            color: var(--text-primary);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .image-caption {
+            padding: 1.5rem;
+            background: white;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .image-caption h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .image-caption p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .click-hint {
+            text-align: center;
+            padding: 0.75rem;
+            background: var(--bg-tertiary);
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+            font-style: italic;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Modal/Lightbox */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            max-width: 95%;
+            max-height: 95%;
+            position: relative;
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); }
+            to { transform: scale(1); }
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        .modal-caption {
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .content {
+                padding: 2rem 3rem;
+            }
+
+            .section h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 2rem 1.5rem;
+            }
+
+            .section h1 {
+                font-size: 1.75rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-card {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .step-number {
+                align-self: flex-start;
+            }
+
+            .tip-card {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .workflow-step {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+
+            .step-num {
+                align-self: flex-start;
+            }
+
+            .modal-close {
+                top: -50px;
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 1.5rem 1rem;
+            }
+
+            .section h1 {
+                font-size: 1.5rem;
+            }
+
+            .section h2 {
+                font-size: 1.25rem;
+            }
+
+            .feature-card,
+            .step-card,
+            .feature-detail,
+            .section-card,
+            .workflow-card,
+            .tip-card,
+            .faq-item,
+            .gallery-item {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection Styling */
+        ::selection {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Scrollbar Styling */
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Print Styles */
+        @media print {
+            .sidebar {
+                display: none;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 0;
+            }
+
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 2rem;
+            }
+
+            .feature-card,
+            .step-card,
+            .feature-detail,
+            .section-card,
+            .workflow-card,
+            .tip-card,
+            .faq-item,
+            .gallery-item {
+                box-shadow: none;
+                border: 1px solid var(--border-color);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Customer Care Management System</h2>
+            <p>User Guide</p>
+            <button id="language-switcher" class="language-btn">English</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#overview" class="nav-link active">Overview</a></li>
+            <li><a href="#getting-started" class="nav-link">Getting Started</a></li>
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#sections" class="nav-link">Sections</a></li>
+            <li><a href="#visual-guide" class="nav-link">Visual Guide</a></li>
+            <li><a href="#workflow" class="nav-link">Workflow</a></li>
+            <li><a href="#tips" class="nav-link">Tips & Best Practices</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <h1>Welcome to Customer Care Management System</h1>
+            <div class="intro-card">
+                <p class="lead">Customer Care Management System is a powerful platform designed to streamline customer service operations and enhance productivity. This guide will help you understand how to use the software effectively.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">👤</div>
+                    <h3>Customer Management</h3>
+                    <p>Organize, track, and manage customer information efficiently</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎫</div>
+                    <h3>Ticket Management</h3>
+                    <p>Manage support tickets and streamline customer service processes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💬</div>
+                    <h3>Communication</h3>
+                    <p>Communicate with customers and team members effectively</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>Security</h3>
+                    <p>Keep customer data safe with advanced security features</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section id="getting-started" class="section">
+            <h2>Getting Started</h2>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Installation</h3>
+                    <p>Download and install Customer Care Management System from the official website. The installation process is straightforward and will guide you through the necessary steps.</p>
+                    <ul>
+                        <li>Run the installer</li>
+                        <li>Follow the setup wizard</li>
+                        <li>Create your account</li>
+                        <li>Log in to get started</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Initial Setup</h3>
+                    <p>After installation, configure your customer service workspace:</p>
+                    <ul>
+                        <li>Set up your profile and preferences</li>
+                        <li>Create or join a workspace</li>
+                        <li>Invite team members</li>
+                        <li>Customize your dashboard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>First Customer Ticket</h3>
+                    <p>Create your first customer ticket to get familiar with the interface:</p>
+                    <ol>
+                        <li>Click the "New Ticket" button</li>
+                        <li>Choose a ticket category or start from scratch</li>
+                        <li>Add customer information and issue details</li>
+                        <li>Save and share</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <h2>Key Features</h2>
+            
+            <div class="feature-detail">
+                <h3>🎫 Ticket Management</h3>
+                <p>A powerful, intuitive system for managing customer support tickets:</p>
+                <ul>
+                    <li><strong>Ticket Creation:</strong> Create and categorize support tickets</li>
+                    <li><strong>Priority Levels:</strong> Set urgency and priority for tickets</li>
+                    <li><strong>Assignment:</strong> Assign tickets to team members</li>
+                    <li><strong>Auto-save:</strong> Never lose ticket data with automatic saving</li>
+                </ul>
+            </div>
+
+            <div class="feature-detail">
+                <h3>👤 Customer Database</h3>
+                <p>Keep customer information organized with comprehensive management tools:</p>
+                <ul>
+                    <li><strong>Customer Profiles:</strong> Complete customer information records</li>
+                    <li><strong>Tags:</strong> Tag customers for easy segmentation</li>
+                    <li><strong>Search:</strong> Powerful search with advanced filters</li>
+                    <li><strong>Favorites:</strong> Mark important customers for quick access</li>
+                </ul>
+            </div>
+
+            <div class="feature-detail">
+                <h3>💬 Communication Tools</h3>
+                <p>Communicate seamlessly with customers and your team:</p>
+                <ul>
+                    <li><strong>Real-time Chat:</strong> Communicate with customers in real-time</li>
+                    <li><strong>Internal Notes:</strong> Add private notes for team members</li>
+                    <li><strong>Ticket History:</strong> Track all interactions and changes</li>
+                    <li><strong>Email Integration:</strong> Send emails directly from tickets</li>
+                </ul>
+            </div>
+
+            <div class="feature-detail">
+                <h3>⚡ Automation & Reporting</h3>
+                <p>Automate repetitive tasks and generate insights:</p>
+                <ul>
+                    <li><strong>Auto-assignment:</strong> Automatically route tickets to agents</li>
+                    <li><strong>Notifications:</strong> Get alerts for new and urgent tickets</li>
+                    <li><strong>Integrations:</strong> Connect with CRM, email, and chat tools</li>
+                    <li><strong>Scheduled Reports:</strong> Automated performance reports</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Interface Sections -->
+        <section id="sections" class="section">
+            <h2>Interface Sections Explained</h2>
+            <p>Understanding the different sections of the Customer Care Management System interface will help you navigate and use the software more effectively.</p>
+
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-icon">🏢</span>
+                    <h3>Company</h3>
+                </div>
+                <div class="section-body">
+                    <p>The <strong>Company</strong> section is used to manage company requests, including creating new requests, tracking request status, approving requests, and managing related information.</p>
+                    <div class="info-box">
+                        <h4>Company Features:</h4>
+                        <ul>
+                            <li>Create and submit company requests</li>
+                            <li>Track request status in real-time</li>
+                            <li>Approve or reject requests</li>
+                            <li>Manage request history and details</li>
+                            <li>Export data to Excel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-icon">🏠</span>
+                    <h3>Dashboard</h3>
+                </div>
+                <div class="section-body">
+                    <p>The dashboard is your home base in Customer Care Management System. It provides an overview of your recent activity and quick access to important tickets and customers.</p>
+                    <div class="info-box">
+                        <h4>What you can do here:</h4>
+                        <ul>
+                            <li>View recent tickets and customer activity</li>
+                            <li>Access your favorites and starred items</li>
+                            <li>See pending tickets and notifications</li>
+                            <li>Quickly create new tickets</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-icon">📂</span>
+                    <h3>Tickets</h3>
+                </div>
+                <div class="section-body">
+                    <p>The Tickets section is where all support tickets are stored and managed. You can browse, search, and organize tickets here.</p>
+                    <div class="info-box">
+                        <h4>Key functions:</h4>
+                        <ul>
+                            <li>Browse tickets in list or grid view</li>
+                            <li>Filter by status, priority, or category</li>
+                            <li>Sort by various criteria</li>
+                            <li>Bulk actions for multiple tickets</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-icon">✏️</span>
+                    <h3>Ticket Editor</h3>
+                </div>
+                <div class="section-body">
+                    <p>The ticket editor is where you manage customer issues. It's a full-featured environment with all the tools you need to resolve tickets efficiently.</p>
+                    <div class="info-box">
+                        <h4>Editor features:</h4>
+                        <ul>
+                            <li>Rich text formatting for ticket descriptions</li>
+                            <li>Attach files, images, and screenshots</li>
+                            <li>Collaborative editing with team presence indicators</li>
+                            <li>Internal notes and customer communication</li>
+                            <li>Full-screen mode for focused ticket resolution</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-icon">👥</span>
+                    <h3>Customers</h3>
+                </div>
+                <div class="section-body">
+                    <p>The Customers section helps you manage customer information and interaction history.</p>
+                    <div class="info-box">
+                        <h4>Customer management:</h4>
+                        <ul>
+                            <li>View all customer profiles</li>
+                            <li>Manage customer tags and segments</li>
+                            <li>View ticket history and interactions</li>
+                            <li>Access customer contact information</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">
+                    <span class="section-icon">⚙️</span>
+                    <h3>Settings</h3>
+                </div>
+                <div class="section-body">
+                    <p>Customize Customer Care Management System to fit your needs in the Settings section.</p>
+                    <div class="info-box">
+                        <h4>Settings available:</h4>
+                        <ul>
+                            <li>Profile and account settings</li>
+                            <li>Notification preferences</li>
+                            <li>Security and privacy options</li>
+                            <li>Integration configurations (email, chat, CRM)</li>
+                            <li>Ticket routing and automation rules</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Usage Guide Section -->
+        <section id="visual-guide" class="section">
+            <h2>រូបភាពណែនាំការប្រើប្រាស់</h2>
+            <h2>Visual Usage Guide</h2>
+            <p>This section provides visual guides to help you understand how to use the Customer Care Management System effectively.</p>
+
+            <!-- Screenshot 1: Company Page -->
+            <div class="gallery-item">
+                <h3>ទំព័រក្រុមហ៊ុន</h3>
+                <h3>Company Page</h3>
+                <div class="image-wrapper" onclick="openModal('screenshot1')">
+                    <!-- REPLACE THE src BELOW WITH YOUR BASE64 IMAGE -->
+                    <img id="img1" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect fill='%23f8fafc' width='800' height='450'/%3E%3Ctext fill='%2364748b' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EClick to load company1.jpg%3C/text%3E%3C/svg%3E" 
+                         alt="ទំព័រក្រុមហ៊ុន - Company Page showing company requests management" 
+                         loading="lazy">
+                    <div class="image-overlay">
+                        <div class="zoom-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="image-caption">
+                    <h4>រូបភាពទី១៖ ទំព័រក្រុមហ៊ុន</h4>
+                    <h4>Figure 1: Company Page</h4>
+                    <p><strong>ភាសាខ្មែរ:</strong> រូបភាពនេះបង្ហាញពីទំព័រ <strong>ក្រុមហ៊ុន</strong>។ អ្នកប្រើប្រាស់អាចចូលទៅកាន់ម៉ឺនុយ <strong>ក្រុមហ៊ុន</strong> ពី Sidebar ខាងឆ្វេង ដើម្បីមើល និងគ្រប់គ្រងព័ត៌មាន ឬសំណើររបស់ក្រុមហ៊ុន។</p>
+                    <p><strong>English:</strong> This screenshot shows the <strong>Company</strong> page. Users can access the <strong>Company</strong> menu from the left sidebar to view and manage company information or requests.</p>
+                </div>
+                <div class="click-hint">
+                    ចុចលើរូបភាពដើម្បីពង្រីក / Click image to enlarge
+                </div>
+            </div>
+
+            <!-- Screenshot 2: System Appearance Settings -->
+            <div class="gallery-item">
+                <h3>ការកំណត់រូបរាងប្រព័ន្ធ</h3>
+                <h3>System Appearance Settings</h3>
+                <div class="image-wrapper" onclick="openModal('screenshot2')">
+                    <!-- REPLACE THE src BELOW WITH YOUR BASE64 IMAGE -->
+                    <img id="img2" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect fill='%23f8fafc' width='800' height='450'/%3E%3Ctext fill='%2364748b' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EClick to load company2.jpg%3C/text%3E%3C/svg%3E" 
+                         alt="ការកំណត់រូបរាងប្រព័ន្ធ - System Appearance Settings showing Light, Dark, and System options" 
+                         loading="lazy">
+                    <div class="image-overlay">
+                        <div class="zoom-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="image-caption">
+                    <h4>រូបភាពទី២៖ ការជ្រើសរើសរូបរាងប្រព័ន្ធ</h4>
+                    <h4>Figure 2: Selecting System Appearance</h4>
+                    <p><strong>ភាសាខ្មែរ:</strong> រូបភាពនេះបង្ហាញពីរបៀបចូលទៅកាន់ការកំណត់រូបរាងប្រព័ន្ធ។ ចុចលើរូបតំណាង <strong>Appearance Settings</strong> នៅផ្នែកខាងលើខាងស្តាំ រួចជ្រើសរើស <strong>តាមប្រព័ន្ធ</strong>, <strong>ភ្លឺ</strong>, ឬ <strong>ងងឹត</strong>។</p>
+                    <p><strong>English:</strong> This screenshot shows how to access the system appearance settings. Click the <strong>Appearance Settings</strong> icon at the top-right area, then select <strong>System</strong>, <strong>Light</strong>, or <strong>Dark</strong>.</p>
+                </div>
+                <div class="click-hint">
+                    ចុចលើរូបភាពដើម្បីពង្រីក / Click image to enlarge
+                </div>
+            </div>
+
+            <!-- Screenshot 3: Top Navigation Icons -->
+            <div class="gallery-item">
+                <h3>រូបតំណាងនៅផ្នែកខាងលើ</h3>
+                <h3>Top Navigation Icons</h3>
+                <div class="image-wrapper" onclick="openModal('screenshot3')">
+                    <!-- REPLACE THE src BELOW WITH YOUR BASE64 IMAGE -->
+                    <img id="img3" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect fill='%23f8fafc' width='800' height='450'/%3E%3Ctext fill='%2364748b' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EClick to load Untitled.png%3C/text%3E%3C/svg%3E" 
+                         alt="រូបតំណាងមុខងារនៅផ្នែកខាងលើ - Top navigation icons for settings, notifications, and user account" 
+                         loading="lazy">
+                    <div class="image-overlay">
+                        <div class="zoom-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="image-caption">
+                    <h4>រូបភាពទី៣៖ រូបតំណាងមុខងារនៅផ្នែកខាងលើ</h4>
+                    <h4>Figure 3: Top Navigation Function Icons</h4>
+                    <p><strong>ភាសាខ្មែរ:</strong> រូបភាពនេះបង្ហាញពីរូបតំណាងសំខាន់ៗនៅផ្នែកខាងលើខាងស្តាំនៃប្រព័ន្ធ។ រូបតំណាងទាំងនេះផ្តល់ភាពងាយស្រួលក្នុងការចូលប្រើមុខងារផ្សេងៗ រួមទាំងការកំណត់រូបរាង ការជូនដំណឹង ការកំណត់ប្រព័ន្ធ និងព័ត៌មានគណនីអ្នកប្រើប្រាស់។</p>
+                    <p><strong>English:</strong> This screenshot shows the important icons in the top-right navigation area. These icons provide quick access to system functions, including appearance settings, notifications, system settings, and user account information.</p>
+                </div>
+                <div class="click-hint">
+                    ចុចលើរូបភាពដើម្បីពង្រីក / Click image to enlarge
+                </div>
+            </div>
+        </section>
+
+        <!-- Workflow Section -->
+        <section id="workflow" class="section">
+            <h2>Common Workflows</h2>
+            <p>Here are some common workflows to help you get the most out of Customer Care Management System.</p>
+
+            <div class="workflow-card">
+                <h3>Creating a New Ticket</h3>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <span class="step-num">1</span>
+                        <p>Click "New Ticket" from the dashboard or tickets page</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-num">2</span>
+                        <p>Choose a ticket category or select "Blank Ticket"</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-num">3</span>
+                        <p>Enter customer information and issue details</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-num">4</span>
+                        <p>Save your ticket (it auto-saves as you work)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-card">
+                <h3>Assigning a Ticket</h3>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <span class="step-num">1</span>
+                        <p>Open the ticket you want to assign</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-num">2</span>
+                        <p>Click the "Assign" button in the top-right corner</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-num">3</span>
+                        <p>Select a team member from the dropdown or search by name</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-num">4</span>
+                        <p>Set priority level and due date if needed</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-num">5</span>
+                        <p>Click "Assign" to complete the assignment</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-card">
+                <h3>Viewing Ticket History</h3>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <span class="step-num">1</span>
+                        <p>Open the ticket</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-num">2</span>
+                        <p>Click the clock icon or "Ticket History" in the menu</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-num">3</span>
+                        <p>Browse through all ticket updates and communications</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span class="step-num">4</span>
+                        <p>Click any entry to view detailed information</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="section">
+            <h2>Tips & Best Practices</h2>
+            
+            <div class="tip-card">
+                <div class="tip-icon">💡</div>
+                <div class="tip-content">
+                    <h3>Use Keyboard Shortcuts</h3>
+                    <p>Speed up your work with keyboard shortcuts. Press <kbd>Ctrl + /</kbd> (or <kbd>Cmd + /</kbd> on Mac) to see all available shortcuts.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-icon">🏷️</div>
+                <div class="tip-content">
+                    <h3>Tag Your Tickets</h3>
+                    <p>Use tags to categorize tickets. This makes them easier to find later and helps with organization.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-icon">📌</div>
+                <div class="tip-content">
+                    <h3>Star Important Tickets</h3>
+                    <p>Star frequently accessed tickets to add them to your favorites for quick access from the dashboard.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-icon">🔄</div>
+                <div class="tip-content">
+                    <h3>Regular Data Exports</h3>
+                    <p>While Customer Care Management System auto-saves and maintains ticket history, consider exporting important data periodically for additional peace of mind.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-icon">💬</div>
+                <div class="tip-content">
+                    <h3>Use Internal Notes</h3>
+                    <p>Instead of updating ticket status directly, use internal notes to communicate with team members. This keeps the customer communication intact while allowing internal discussion.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How do I reset my password?</h3>
+                <p>Click "Forgot Password" on the login page and follow the instructions sent to your email. If you don't receive the email, check your spam folder or contact support.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I work offline?</h3>
+                <p>Yes! Customer Care Management System has an offline mode. Changes you make while offline will sync automatically when you reconnect to the internet.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I export ticket data?</h3>
+                <p>Open the ticket or customer profile, click the "Export" button (usually in the top menu), and choose your preferred format (CSV, PDF, Excel, etc.).</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is customer data secure?</h3>
+                <p>Yes, we use industry-standard encryption and security practices. All data is encrypted in transit and at rest. We also offer two-factor authentication for added security and comply with data protection regulations.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How many team members can I add?</h3>
+                <p>This depends on your plan. Free plans typically allow 3-5 agents, while paid plans offer unlimited team members. Check your plan details in Settings.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I integrate with other tools?</h3>
+                <p>Yes! Customer Care Management System integrates with popular tools like Slack, Zendesk, Salesforce, email providers, and many more. Visit Settings > Integrations to connect your favorite tools.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2024 Customer Care Management System. All rights reserved.</p>
+            <p>Need more help? <a href="#">Contact Support</a> | <a href="#">Visit Help Center</a></p>
+        </footer>
+    </main>
+
+    <!-- Modal/Lightbox -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div id="modalCaption" class="modal-caption"></div>
+        </div>
+    </div>
+
+    <script>
+        // Language Switcher
+        let currentLang = 'km';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'km' ? 'en' : 'km';
+            const html = document.documentElement;
+            const btn = document.getElementById('language-switcher');
+            
+            if (currentLang === 'en') {
+                html.setAttribute('lang', 'en');
+                btn.textContent = 'ភាសាខ្មែរ';
+                document.body.style.fontFamily = "var(--english-font)";
+            } else {
+                html.setAttribute('lang', 'km');
+                btn.textContent = 'English';
+                document.body.style.fontFamily = "var(--khmer-font)";
+            }
+        }
+
+        document.getElementById('language-switcher').addEventListener('click', toggleLanguage);
+
+        // Modal/Lightbox Functions
+        function openModal(screenshotId) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            let imgSrc, captionText;
+            
+            if (screenshotId === 'screenshot1') {
+                imgSrc = document.getElementById('img1').src;
+                captionText = 'ទំព័រក្រុមហ៊ុន / Company Page';
+            } else if (screenshotId === 'screenshot2') {
+                imgSrc = document.getElementById('img2').src;
+                captionText = 'ការកំណត់រូបរាងប្រព័ន្ធ / System Appearance Settings';
+            } else if (screenshotId === 'screenshot3') {
+                imgSrc = document.getElementById('img3').src;
+                captionText = 'រូបតំណាងមុខងារនៅផ្នែកខាងលើ / Top Navigation Icons';
+            }
+            
+            modalImg.src = imgSrc;
+            modalCaption.textContent = captionText;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 20;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const scrollPosition = window.scrollY + 100;
+            
+            document.querySelectorAll('.section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        function createMobileMenuToggle() {
+            const toggleButton = document.createElement('button');
+            toggleButton.className = 'mobile-menu-toggle';
+            toggleButton.innerHTML = '☰';
+            toggleButton.setAttribute('aria-label', 'Toggle navigation menu');
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                .mobile-menu-toggle {
+                    display: none;
+                    position: fixed;
+                    top: 1rem;
+                    left: 1rem;
+                    z-index: 1001;
+                    background: var(--primary-color);
+                    color: white;
+                    border: none;
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 0.5rem;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    box-shadow: var(--shadow-md);
+                    transition: var(--transition);
+                }
+                .mobile-menu-toggle:hover {
+                    background: var(--primary-dark);
+                    transform: scale(1.05);
+                }
+                .mobile-menu-toggle.active {
+                    background: var(--danger-color);
+                }
+                @media (max-width: 768px) {
+                    .mobile-menu-toggle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .sidebar-overlay {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                    z-index: 999;
+                }
+                .sidebar-overlay.active {
+                    display: block;
+                }
+            `;
+            document.head.appendChild(style);
+            document.body.appendChild(toggleButton);
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'sidebar-overlay';
+            document.body.appendChild(overlay);
+            
+            toggleButton.addEventListener('click', () => {
+                document.querySelector('.sidebar').classList.toggle('active');
+                toggleButton.classList.toggle('active');
+                overlay.classList.toggle('active');
+                toggleButton.innerHTML = document.querySelector('.sidebar').classList.contains('active') ? '✕' : '☰';
+            });
+            
+            overlay.addEventListener('click', () => {
+                document.querySelector('.sidebar').classList.remove('active');
+                toggleButton.classList.remove('active');
+                overlay.classList.remove('active');
+                toggleButton.innerHTML = '☰';
+            });
+        }
+
+        createMobileMenuToggle();
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('📚 Customer Care Management System Documentation initialized successfully!');
+            console.log('💡 Features: Multi-language (Khmer/English), Image Gallery with Lightbox, Responsive Design');
+            console.log('📸 To add real screenshots:');
+            console.log('   1. Convert company1.jpg, company2.jpg, and Untitled.png to Base64');
+            console.log('   2. Replace the src attribute of img1, img2, and img3 with the Base64 data');
+            console.log('   3. Example: src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ..."');
+        });
+    </script>
+</body>
+</html>
