@@ -1,5 +1,6 @@
 // DOM Elements
 const navLinks = document.querySelectorAll('.nav-link');
+const functionLinks = document.querySelectorAll('.function-link');
 const sections = document.querySelectorAll('.content-section');
 const sidebar = document.getElementById('sidebar');
 const mobileToggle = document.getElementById('mobileToggle');
@@ -44,6 +45,45 @@ navLinks.forEach(link => {
     });
 });
 
+// Smooth Scroll for Function Links
+functionLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+            const offsetTop = targetSection.offsetTop - 100;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Active Function Link on Scroll
+function highlightFunctionLinkOnScroll() {
+    let current = '';
+    const scrollPosition = window.scrollY + 120;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    functionLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
 // Category Toggle Function
 function toggleCategory(button) {
     const menu = button.nextElementSibling;
@@ -72,6 +112,22 @@ function toggleSubmenu(button) {
     } else {
         submenu.classList.remove('collapsed');
         submenu.classList.add('expanded');
+        button.classList.add('active');
+    }
+}
+
+// Nested Submenu Toggle Function
+function toggleNestedSubmenu(button) {
+    const nestedSubmenu = button.nextElementSibling;
+    const isExpanded = nestedSubmenu.classList.contains('expanded');
+    
+    if (isExpanded) {
+        nestedSubmenu.classList.remove('expanded');
+        nestedSubmenu.classList.add('collapsed');
+        button.classList.remove('active');
+    } else {
+        nestedSubmenu.classList.remove('collapsed');
+        nestedSubmenu.classList.add('expanded');
         button.classList.add('active');
     }
 }
@@ -335,7 +391,9 @@ function addReadingProgress() {
 document.addEventListener('DOMContentLoaded', () => {
     // Core functionality
     window.addEventListener('scroll', highlightNavOnScroll);
+    window.addEventListener('scroll', highlightFunctionLinkOnScroll);
     highlightNavOnScroll(); // Initial call
+    highlightFunctionLinkOnScroll(); // Initial call
 
     // Enhanced features
     initMobileMenu();

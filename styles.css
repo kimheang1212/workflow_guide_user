@@ -237,6 +237,110 @@ html[lang="km"] * {
     margin-left: 1rem;
 }
 
+/* Nested Submenu Styles */
+.nested-submenu-container {
+    margin-top: 0.25rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--border-light);
+    margin-left: 1.5rem;
+}
+
+.nested-submenu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    transition: var(--transition);
+    text-align: left;
+}
+
+.nested-submenu-toggle:hover {
+    background: var(--bg-secondary);
+    color: var(--primary-color);
+}
+
+.nested-submenu-toggle.active {
+    color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.nested-submenu-icon {
+    font-size: 0.9rem;
+}
+
+.nested-submenu-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.nested-submenu-khmer {
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.nested-submenu-english {
+    color: var(--text-tertiary);
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+
+.nested-submenu-arrow {
+    font-size: 0.6rem;
+    color: var(--text-tertiary);
+    transition: transform 0.3s ease;
+}
+
+.nested-submenu-toggle.active .nested-submenu-arrow {
+    transform: rotate(90deg);
+}
+
+.nested-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.nested-submenu.collapsed {
+    max-height: 0;
+}
+
+.nested-submenu.expanded {
+    max-height: 500px;
+}
+
+.nested-submenu li {
+    margin: 0;
+}
+
+.nested-submenu .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.nested-submenu .menu-icon {
+    font-size: 1rem;
+}
+
+.nested-submenu .nav-khmer {
+    font-size: 0.85rem;
+}
+
+.nested-submenu .nav-english {
+    font-size: 0.7rem;
+}
+
 .submenu-toggle {
     display: flex;
     align-items: center;
@@ -454,6 +558,101 @@ html[lang="km"] * {
 .content-section {
     margin-bottom: 3rem;
     scroll-margin-top: calc(var(--header-height) + 2rem);
+}
+
+/* Function Links Container */
+.function-links-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    margin-bottom: 2.5rem;
+}
+
+.function-links-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.function-links-title .title-khmer {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.function-links-title .title-english {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.function-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.function-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.function-link:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.function-link.active {
+    background: var(--primary-light);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.function-link-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+}
+
+.function-link-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    flex: 1;
+}
+
+.function-link-text .text-khmer {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: inherit;
+    margin-bottom: 0;
+}
+
+.function-link-text .text-english {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+}
+
+.function-link:hover .text-english,
+.function-link.active .text-english {
+    color: var(--text-secondary);
 }
 
 .section-header {
