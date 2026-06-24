@@ -86,38 +86,88 @@
                         </a>
                     </li>
                 </ul>
+            </div>
 
-                <!-- Company Submenu -->
-                <div class="submenu-container">
-                    <button class="submenu-toggle" onclick="toggleSubmenu(this)">
-                        <span class="submenu-icon">🏢</span>
-                        <span class="submenu-text">
-                            <span class="submenu-khmer">ក្រុមហ៊ុន</span>
-                            <span class="submenu-english">Company</span>
-                        </span>
-                        <span class="submenu-arrow">▶</span>
-                    </button>
-                    <ul class="submenu" id="companySubmenu">
-                        <li>
-                            <a href="#company" class="nav-link">
-                                <span class="menu-icon">🏢</span>
-                                <span class="nav-text">
-                                    <span class="nav-khmer">ក្រុមហ៊ុន</span>
-                                    <span class="nav-english">Company</span>
+            <!-- Company Main Category -->
+            <div class="sidebar-category">
+                <button class="category-toggle" onclick="toggleCategory(this)">
+                    <span class="category-icon">🏢</span>
+                    <span class="category-text">
+                        <span class="category-khmer">ក្រុមហ៊ុន</span>
+                        <span class="category-english">Company</span>
+                    </span>
+                    <span class="toggle-arrow">▼</span>
+                </button>
+                <ul class="sidebar-menu" id="companyMainMenu">
+                    <li>
+                        <a href="#company" class="nav-link">
+                            <span class="menu-icon">📋</span>
+                            <span class="nav-text">
+                                <span class="nav-khmer">ក្រុមហ៊ុន</span>
+                                <span class="nav-english">Company</span>
+                            </span>
+                        </a>
+                        
+                        <!-- Company Functions Nested Submenu -->
+                        <div class="nested-submenu-container">
+                            <button class="nested-submenu-toggle" onclick="toggleNestedSubmenu(this)">
+                                <span class="nested-submenu-icon">⚙️</span>
+                                <span class="nested-submenu-text">
+                                    <span class="nested-submenu-khmer">មុខងារក្រុមហ៊ុន</span>
+                                    <span class="nested-submenu-english">Company Functions</span>
                                 </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#branch" class="nav-link">
-                                <span class="menu-icon">🏪</span>
-                                <span class="nav-text">
-                                    <span class="nav-khmer">សាខា</span>
-                                    <span class="nav-english">Branch</span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                                <span class="nested-submenu-arrow">▶</span>
+                            </button>
+                            <ul class="nested-submenu" id="companyFunctionsSubmenu">
+                                <li>
+                                    <a href="#company-search" class="nav-link">
+                                        <span class="menu-icon">🔍</span>
+                                        <span class="nav-text">
+                                            <span class="nav-khmer">ស្វែងរក</span>
+                                            <span class="nav-english">Search</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#export-excel" class="nav-link">
+                                        <span class="menu-icon">📊</span>
+                                        <span class="nav-text">
+                                            <span class="nav-khmer">នាំចេញជា Excel</span>
+                                            <span class="nav-english">Export Excel</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#create-company" class="nav-link">
+                                        <span class="menu-icon">➕</span>
+                                        <span class="nav-text">
+                                            <span class="nav-khmer">បង្កើតក្រុមហ៊ុនថ្មី</span>
+                                            <span class="nav-english">Create New Company</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#upload-file" class="nav-link">
+                                        <span class="menu-icon">📁</span>
+                                        <span class="nav-text">
+                                            <span class="nav-khmer">បញ្ចូល File</span>
+                                            <span class="nav-english">Upload File</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#branch" class="nav-link">
+                            <span class="menu-icon">🏪</span>
+                            <span class="nav-text">
+                                <span class="nav-khmer">សាខា</span>
+                                <span class="nav-english">Branch</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </aside>
@@ -146,7 +196,7 @@
                 <span class="heading-english">General Functions Guide</span>
             </h1>
             <p class="intro-text">
-                <span class="text-khmer">មគ្គុម្មប្រព័ន្ធនេះជួយអ្នកប្រើប្រាស់យល់ពីមុខងារទូទៅទាំងអស់នៃប្រព័ន្ធ និងវិធីប្រើប្រាស់។</span>
+                <span class="text-khmer">ប្រព័ន្ធនេះជួយអ្នកប្រើប្រាស់យល់ពីមុខងារទូទៅទាំងអស់នៃប្រព័ន្ធ និងវិធីប្រើប្រាស់។</span>
                 <span class="text-english">This guide helps users understand all general functions of the system and how to use them effectively.</span>
             </p>
         </section>
@@ -157,7 +207,7 @@
                 <div class="section-icon">🔝</div>
                 <div class="section-title-group">
                     <h2 class="section-title">
-                        <span class="title-khmer">រូបតំណាងមុខងារនៅផ្នែកខាងលើ</span>
+                        <span class="title-khmer">មុខងារនៅផ្នែកខាងលើ</span>
                         <span class="title-english">Top Navigation Function Icons</span>
                     </h2>
                     <p class="section-description">
@@ -317,7 +367,7 @@
                 <div class="screenshot-header">
                     <span class="screenshot-icon">📸</span>
                     <h3 class="screenshot-title">
-                        <span class="title-khmer">រូបតំណាងមុខងារនៅផ្នែកខាងលើ</span>
+                        <span class="title-khmer">មុខងារនៅផ្នែកខាងលើ</span>
                         <span class="title-english">Top Navigation Function Icons</span>
                     </h3>
                 </div>
@@ -723,8 +773,62 @@
                         <span class="title-english">Company</span>
                     </h2>
                     <p class="section-description">
-                        <span class="desc-khmer">ផ្នែកក្រុមហ៊ុនប្រើសម្រាប់មើល និងគ្រប់គ្រងព័ត៌មានក្រុមហ៊ុន។ អ្នកប្រើប្រាស់អាចស្វែងរកព័ត៌មានក្រុមហ៊ុនបានយ៉ាងងាយស្រួល។</span>
-                        <span class="desc-english">The Company section is used to view and manage company information. Users can easily search for company records.</span>
+                        <span class="desc-khmer">ផ្នែកក្រុមហ៊ុនប្រើសម្រាប់គ្រប់គ្រងព័ត៌មានក្រុមហ៊ុន និងតាមដានសំណើដែលពាក់ព័ន្ធនឹងក្រុមហ៊ុននីមួយៗ។</span>
+                        <span class="desc-english">The Company section is used to manage company information and track requests related to each company.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Company Functions Quick Links -->
+            <div class="function-links-container">
+                <h3 class="function-links-title">
+                    <span class="title-khmer">មុខងារក្រុមហ៊ុន</span>
+                    <span class="title-english">Company Functions</span>
+                </h3>
+                <div class="function-links-grid">
+                    <a href="#company-search" class="function-link">
+                        <span class="function-link-icon">🔍</span>
+                        <span class="function-link-text">
+                            <span class="text-khmer">ស្វែងរកក្រុមហ៊ុន</span>
+                            <span class="text-english">Search Company</span>
+                        </span>
+                    </a>
+                    <a href="#export-excel" class="function-link">
+                        <span class="function-link-icon">📊</span>
+                        <span class="function-link-text">
+                            <span class="text-khmer">នាំចេញជា Excel</span>
+                            <span class="text-english">Export Excel</span>
+                        </span>
+                    </a>
+                    <a href="#create-company" class="function-link">
+                        <span class="function-link-icon">➕</span>
+                        <span class="function-link-text">
+                            <span class="text-khmer">បង្កើតក្រុមហ៊ុនថ្មី</span>
+                            <span class="text-english">Create New Company</span>
+                        </span>
+                    </a>
+                    <a href="#upload-file" class="function-link">
+                        <span class="function-link-icon">📁</span>
+                        <span class="function-link-text">
+                            <span class="text-khmer">បញ្ចូល File</span>
+                            <span class="text-english">Upload File</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+        <!-- Search Company Section -->
+        <section id="company-search" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🔍</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">ស្វែងរកក្រុមហ៊ុន</span>
+                        <span class="title-english">Search Company</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">ប្រើសម្រាប់ស្វែងរកព័ត៌មានក្រុមហ៊ុន ដោយបញ្ចូលលេខកូដ ឈ្មោះ អ៊ីមែល លេខទូរស័ព្ទ ឬអាសយដ្ឋាន។ ប្រព័ន្ធនឹងបង្ហាញលទ្ធផលដែលត្រូវនឹងពាក្យស្វែងរក។</span>
+                        <span class="desc-english">Use this function to find company information by entering a code, name, email, phone number, or address. The system displays matching results.</span>
                     </p>
                 </div>
             </div>
@@ -734,12 +838,12 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>
-                            <span class="content-khmer">ស្វែងរកក្រុមហ៊ុន</span>
-                            <span class="content-english">Search Company</span>
+                            <span class="content-khmer">ចូលទៅកាន់ក្រុមហ៊ុន</span>
+                            <span class="content-english">Go to Company</span>
                         </h3>
                         <p>
-                            <span class="text-khmer">ចុចលើម៉ឺនុយ <strong>ក្រុមហ៊ុន > ក្រុមហ៊ុន</strong>។ បញ្ចូលពាក្យគន្លឹះក្នុងប្រអប់ស្វែងរក ដើម្បីស្វែងរកព័ត៌មានក្រុមហ៊ុន ដូចជា លេខកូដ ឈ្មោះ អ៊ីមែល លេខទូរស័ព្ទ ឬអាសយដ្ឋាន។ លទ្ធផលក្នុងតារាងនឹងបង្ហាញតាមពាក្យដែលបានស្វែងរក។</span>
-                            <span class="text-english">Click <strong>Company > Company</strong>. Enter a keyword in the search box to find company information, such as company code, name, email, phone number, or address. The table will show matching results.</span>
+                            <span class="text-khmer">ចុចលើ <strong>ក្រុមហ៊ុន > ក្រុមហ៊ុន</strong>។</span>
+                            <span class="text-english">Go to <strong>Company > Company</strong>.</span>
                         </p>
                     </div>
                 </div>
@@ -748,27 +852,27 @@
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>
-                            <span class="content-khmer">របៀបប្រើប្រាស់</span>
-                            <span class="content-english">How to Use</span>
+                            <span class="content-khmer">បញ្ចូលពាក្យស្វែងរក</span>
+                            <span class="content-english">Enter Search Keyword</span>
                         </h3>
                         <p>
-                            <span class="text-khmer">អនុវត្តជំហានទាំងនេះដើម្បីស្វែងរកព័ត៌មានក្រុមហ៊ុន៖</span>
-                            <span class="text-english">Follow these steps to search for company information:</span>
+                            <span class="text-khmer">បញ្ចូលពាក្យស្វែងរកក្នុងប្រអប់ Search។</span>
+                            <span class="text-english">Enter a keyword in the Search box.</span>
                         </p>
-                        <ol class="step-list">
-                            <li>
-                                <span class="text-khmer">ចុចលើ <strong>ក្រុមហ៊ុន > ក្រុមហ៊ុន</strong>។</span>
-                                <span class="text-english">Click <strong>Company > Company</strong>.</span>
-                            </li>
-                            <li>
-                                <span class="text-khmer">បញ្ចូលពាក្យស្វែងរកក្នុងប្រអប់ Search ដូចជា <code>UAT</code>។</span>
-                                <span class="text-english">Enter a keyword in the Search box, such as <code>UAT</code>.</span>
-                            </li>
-                            <li>
-                                <span class="text-khmer">ពិនិត្យលទ្ធផលក្រុមហ៊ុនដែលបង្ហាញក្នុងតារាង។</span>
-                                <span class="text-english">Review the matching company records displayed in the table.</span>
-                            </li>
-                        </ol>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">មើលលទ្ធផល</span>
+                            <span class="content-english">View Results</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ពិនិត្យលទ្ធផលដែលបង្ហាញក្នុងតារាង។</span>
+                            <span class="text-english">Review the matching results in the table.</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -792,41 +896,476 @@
             </div>
         </section>
 
-        <!-- Navigation Buttons -->
-        <div class="page-navigation">
-            <a href="#" class="nav-button prev-button">
-                <span class="button-icon">←</span>
-                <span class="button-text">
-                    <span class="text-khmer">ទំព័រមុន</span>
-                    <span class="text-english">Previous Page</span>
-                </span>
-            </a>
-            <a href="#" class="nav-button next-button">
-                <span class="button-text">
-                    <span class="text-khmer">ទំព័របន្ទាប់</span>
-                    <span class="text-english">Next Page</span>
-                </span>
-                <span class="button-icon">→</span>
-            </a>
-        </div>
-    </main>
-
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <div class="modal-image-container">
-                <img id="modalImage" src="" alt="Enlarged view">
+        <!-- Export Excel Section -->
+        <section id="export-excel" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">នាំចេញជា Excel</span>
+                        <span class="title-english">Export Excel</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់នាំចេញបញ្ជីព័ត៌មានក្រុមហ៊ុនទៅជាឯកសារ Excel ដើម្បីរក្សាទុក ឬប្រើប្រាស់បន្ត។</span>
+                        <span class="desc-english">This function exports the company list to an Excel file for saving or further use.</span>
+                    </p>
+                </div>
             </div>
-            <div class="modal-controls">
-                <button class="modal-btn" onclick="zoomOut()">−</button>
-                <button class="modal-btn" onclick="resetZoom()">⟲</button>
-                <button class="modal-btn" onclick="zoomIn()">+</button>
-            </div>
-            <div id="modalCaption" class="modal-caption"></div>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចូលទៅកាន់ផ្នែកក្រុមហ៊ុន</span>
+                            <span class="content-english">Open Company</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើ <strong>ក្រុមហ៊ុន > ក្រុមហ៊ុន</strong> នៅក្នុងម៉ឺនុយខាងឆ្វេង។</span>
+                            <span class="text-english">Click <strong>Company > Company</strong> from the left sidebar.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចុចប៊ូតុង Excel</span>
+                            <span class="content-english">Click the Excel Button</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើប៊ូតុង <strong>Excel</strong> នៅផ្នែកខាងលើនៃតារាងក្រុមហ៊ុន។</span>
+                            <span class="text-english">Click the <strong>Excel</strong> button above the company table.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">រក្សាទុកឯកសារ</span>
+                            <span class="content-english">Save the File</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ជ្រើសរើសទីតាំងសម្រាប់រក្សាទុកឯកសារ ហើយចុច <strong>Save</strong>។</span>
+                            <span class="text-english">Choose a folder to save the file, then click <strong>Save</strong>.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បើកឯកសារ Excel</span>
+                            <span class="content-english">Open the Excel File</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បើកឯកសារ <code>Company.xlsx</code> ដើម្បីមើលព័ត៌មានក្រុមហ៊ុនដែលបាននាំចេញ។</span>
+                            <span class="text-english">Open the <code>Company.xlsx</code> file to view the exported company information.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">នាំចេញព័ត៌មានក្រុមហ៊ុនជា Excel</span>
+                        <span class="title-english">Export Company Information to Excel</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/company export excel.jpg" alt="Export Company to Excel" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/The company chooses a place for the store.jpg" alt="Save Excel File" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/The file excel export from company.jpg" alt="Exported Excel File" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Create New Company Section -->
+        <section id="create-company" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">➕</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">បង្កើតក្រុមហ៊ុនថ្មី</span>
+                        <span class="title-english">Create New Company</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់បង្កើតព័ត៌មានក្រុមហ៊ុនថ្មីក្នុងប្រព័ន្ធ។</span>
+                        <span class="desc-english">This function is used to create a new company record in the system.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចុចប៊ូតុងបន្ថែម</span>
+                            <span class="content-english">Click Add</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចូលទៅកាន់ <strong>ក្រុមហ៊ុន > ក្រុមហ៊ុន</strong> ហើយចុចប៊ូតុង <strong>បន្ថែម</strong> នៅផ្នែកខាងលើខាងស្តាំ។</span>
+                            <span class="text-english">Go to <strong>Company > Company</strong>, then click the <strong>Add</strong> button in the top-right corner.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បំពេញព័ត៌មានក្រុមហ៊ុន</span>
+                            <span class="content-english">Enter Company Information</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បំពេញព័ត៌មានក្រុមហ៊ុនក្នុងទម្រង់។ អ្នកប្រើប្រាស់អាចបំពេញតែព័ត៌មានដែលមានសញ្ញា <code>*</code> ជាព័ត៌មានចាំបាច់បាន។ ព័ត៌មានផ្សេងទៀតអាចបំពេញបន្ថែមបាន ប្រសិនបើមាន។</span>
+                            <span class="text-english">Enter the company information in the form. Users only need to complete fields marked with <code>*</code>, as they are required. Other fields can be completed when the information is available.</span>
+                        </p>
+                        <ol class="step-list">
+                            <li>
+                                <span class="text-khmer"><strong>ព័ត៌មានក្រុមហ៊ុន / Company Information:</strong> បញ្ចូលព័ត៌មានលម្អិតក្រុមហ៊ុន។</span>
+                                <span class="text-english"><strong>Company Information:</strong> Enter the company details.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><strong>ស្ថានភាពសកម្ម / Active Status:</strong> ធីកជម្រើសនេះនៅពេលក្រុមហ៊ុនត្រូវបានធ្វើឲ្យសកម្ម។</span>
+                                <span class="text-english"><strong>Active Status:</strong> Tick this option when the company should be active.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><strong>រក្សាទុក / Save:</strong> ចុចរក្សាទុកបន្ទាប់ពីបញ្ចូលព័ត៌មានចាំបាច់។</span>
+                                <span class="text-english"><strong>Save:</strong> Click Save after entering the required information.</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">រក្សាទុកព័ត៌មាន</span>
+                            <span class="content-english">Save Information</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បន្ទាប់ពីបំពេញព័ត៌មានចាំបាច់រួច ចុចប៊ូតុង <strong>រក្សាទុក</strong> ដើម្បីបង្កើតក្រុមហ៊ុនថ្មី។</span>
+                            <span class="text-english">After completing the required fields, click <strong>Save</strong> to create the new company.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">បង្កើតក្រុមហ៊ុនថ្មី</span>
+                        <span class="title-english">Create New Company</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/company create.jpg" alt="Add Company Button" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/company create fill in the information.jpg" alt="Fill Company Information" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📋</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំ</span>
+                        <span class="title-english">Notes</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <ul class="feature-list">
+                        <li>
+                            <span class="text-khmer">អ្នកប្រើប្រាស់អាចបំពេញតែព័ត៌មានដែលចាំបាច់មានសញ្ញា <code>*</code> បាន។</span>
+                            <span class="text-english">Users may complete only the required fields marked with <code>*</code>.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ព័ត៌មានដែលមិនចាំបាច់ អាចបំពេញបន្ថែមនៅពេលមានព័ត៌មាន។</span>
+                            <span class="text-english">Optional information can be added when available.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ចុច <strong>បោះបង់</strong> ឬសញ្ញាព្រួញត្រឡប់ក្រោយ ដើម្បីត្រឡប់ទៅទំព័រក្រុមហ៊ុនដោយមិនរក្សាទុកព័ត៌មាន។</span>
+                            <span class="text-english">Click <strong>Cancel</strong> or the back arrow to return to the Company page without saving.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload File Section -->
+        <section id="upload-file" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">📁</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">បញ្ចូល File</span>
+                        <span class="title-english">Upload File</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់ផ្ទុកឯកសារ Excel ដើម្បីបង្កើត ឬបន្ថែមព័ត៌មានក្រុមហ៊ុន និងសាខាច្រើនក្នុងពេលតែមួយ។</span>
+                        <span class="desc-english">This function is used to upload an Excel file to create or add multiple company and branch records at the same time.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចូលទៅកាន់ក្រុមហ៊ុន</span>
+                            <span class="content-english">Open Company</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចូលទៅកាន់ <strong>ក្រុមហ៊ុន > ក្រុមហ៊ុន</strong> ហើយចុចប៊ូតុង <strong>បញ្ចូល File / Upload File</strong> នៅផ្នែកខាងលើ។</span>
+                            <span class="text-english">Go to <strong>Company > Company</strong>, then click the <strong>Upload File</strong> button at the top.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ទាញយកទម្រង់ Excel</span>
+                            <span class="content-english">Download the Excel Template</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចប៊ូតុង <strong>ទាញយកគំរូ / Download Template</strong> ដើម្បីទាញយកឯកសារ Excel គំរូសម្រាប់បំពេញព័ត៌មានក្រុមហ៊ុន និងសាខា។</span>
+                            <span class="text-english">Click <strong>Download Template</strong> to download the Excel template for company and branch information.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">រក្សាទុកឯកសារគំរូ</span>
+                            <span class="content-english">Save the Template File</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ជ្រើសរើសទីតាំងសម្រាប់រក្សាទុកឯកសារ បន្ទាប់មកចុច <strong>Save</strong>។</span>
+                            <span class="text-english">Choose a folder to save the file, then click <strong>Save</strong>.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បំពេញព័ត៌មានក្នុង Excel</span>
+                            <span class="content-english">Fill in the Excel File</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បើកឯកសារ Excel ដែលបានទាញយក ហើយបំពេញព័ត៌មានតាមជួរឈរខាងក្រោម៖</span>
+                            <span class="text-english">Open the downloaded Excel file and fill in the following columns:</span>
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="text-khmer"><code>Company_Code</code> — លេខកូដក្រុមហ៊ុន</span>
+                                <span class="text-english"><code>Company_Code</code> — Company code</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><code>Company_Name</code> — ឈ្មោះក្រុមហ៊ុន</span>
+                                <span class="text-english"><code>Company_Name</code> — Company name</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><code>Branch_Code</code> — លេខកូដសាខា</span>
+                                <span class="text-english"><code>Branch_Code</code> — Branch code</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><code>Branch_Name</code> — ឈ្មោះសាខា</span>
+                                <span class="text-english"><code>Branch_Name</code> — Branch name</span>
+                            </li>
+                        </ul>
+                        <p>
+                            <span class="text-khmer">អាចបំពេញព័ត៌មានក្រុមហ៊ុនតែប៉ុណ្ណោះបាន ប្រសិនបើមិនមានព័ត៌មានសាខា។</span>
+                            <span class="text-english">Users may enter only company information when branch information is not available.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ជ្រើសរើសឯកសារ Excel</span>
+                            <span class="content-english">Select the Excel File</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ត្រឡប់មកទំព័រ <strong>បញ្ចូល File / Upload File</strong> ហើយអូសឯកសារ Excel ទម្លាក់ក្នុងប្រអប់ផ្ទុកឯកសារ ឬចុចលើប្រអប់ដើម្បីជ្រើសរើសឯកសារ។</span>
+                            <span class="text-english">Return to the <strong>Upload File</strong> page and drag the completed Excel file into the upload area, or click the upload area to select a file.</span>
+                        </p>
+                        <p>
+                            <span class="text-khmer">ប្រព័ន្ធគាំទ្រតែឯកសារ <code>.xlsx</code> ប៉ុណ្ណោះ។</span>
+                            <span class="text-english">Only <code>.xlsx</code> files are supported.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ពិនិត្យបញ្ជីទិន្នន័យមុនបញ្ចូល</span>
+                            <span class="content-english">Review Data Before Upload</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បន្ទាប់ពីជ្រើសរើសឯកសារ ប្រព័ន្ធនឹងបង្ហាញបញ្ជីព័ត៌មានក្រុមហ៊ុន និងសាខាដែលបានអានពីឯកសារ។ សូមពិនិត្យព័ត៌មានទាំងអស់មុនចុចរក្សាទុក។</span>
+                            <span class="text-english">After selecting the file, the system displays the company and branch records read from the Excel file. Review all data before saving.</span>
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="text-khmer">ពិនិត្យចំនួនព័ត៌មានដែលអាចបញ្ចូលបាន។</span>
+                                <span class="text-english">Check the number of valid records.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">ពិនិត្យចំនួនព័ត៌មានដែលមានបញ្ហា។</span>
+                                <span class="text-english">Check the number of records with issues.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">ចុចព្រួញនៅមុខធាតុនីមួយៗ ដើម្បីមើលព័ត៌មានលម្អិត។</span>
+                                <span class="text-english">Click the arrow beside each item to view details.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">លុបព័ត៌មានដែលមិនត្រឹមត្រូវ ដោយចុចរូបតំណាងលុប។</span>
+                                <span class="text-english">Remove incorrect records by clicking the delete icon.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">ទុកតែព័ត៌មានត្រឹមត្រូវសម្រាប់បញ្ចូលទៅក្នុងប្រព័ន្ធ។</span>
+                                <span class="text-english">Keep only valid records for upload.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">រក្សាទុកព័ត៌មាន</span>
+                            <span class="content-english">Save Information</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បន្ទាប់ពីពិនិត្យបញ្ជីទិន្នន័យរួច ចុចប៊ូតុង <strong>រក្សាទុក / Save</strong> ដើម្បីបញ្ចូលព័ត៌មានត្រឹមត្រូវទៅក្នុងប្រព័ន្ធ។</span>
+                            <span class="text-english">After reviewing the records, click <strong>Save</strong> to upload the valid information into the system.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">បញ្ចូលព័ត៌មានក្រុមហ៊ុន និងសាខា</span>
+                        <span class="title-english">Upload Company and Branch Information</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/company upload file1.jpg" alt="Upload File Button" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/company upload file2.jpg" alt="Download Template" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/company upload file3.jpg" alt="Save Template" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/company upload file4.jpg" alt="Excel Template" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/company upload file5.jpg" alt="Upload Area" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/company upload file6.jpg" alt="File Preview and Validation" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/company upload file7.jpg" alt="Record List with Actions" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📋</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំ</span>
+                        <span class="title-english">Notes</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <ul class="feature-list">
+                        <li>
+                            <span class="text-khmer">ប្រើតែឯកសារ Excel ប្រភេទ <code>.xlsx</code>។</span>
+                            <span class="text-english">Only <code>.xlsx</code> Excel files are supported.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ត្រូវបំពេញព័ត៌មានតាមទម្រង់ Excel ដែលបានទាញយក។</span>
+                            <span class="text-english">Complete the information using the downloaded Excel template.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ពិនិត្យព័ត៌មានជាមុនសិន មុនចុចរក្សាទុក។</span>
+                            <span class="text-english">Review the data before clicking Save.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">អ្នកប្រើប្រាស់អាចចុច <
