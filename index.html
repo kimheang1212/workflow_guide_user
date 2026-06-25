@@ -14,166 +14,165 @@
                 <h1 class="system-name">Customer Care Management System</h1>
                 <p class="page-title">មុខងារទូទៅ / General Functions Guide</p>
             </div>
+            <div class="header-right">
+                <button class="appearance-btn" id="appearanceBtn" aria-label="Change appearance">
+                    <span class="appearance-icon">🎨</span>
+                    <span class="appearance-text">Appearance</span>
+                </button>
+                <div class="appearance-popup" id="appearancePopup">
+                    <button class="theme-option" data-theme="auto">
+                        <span class="theme-label">
+                            <span class="theme-khmer">ស្វ័យប្រវត្តិ</span>
+                            <span class="theme-english">Auto</span>
+                        </span>
+                        <span class="theme-check">✓</span>
+                    </button>
+                    <button class="theme-option" data-theme="light">
+                        <span class="theme-label">
+                            <span class="theme-khmer">ទម្រង់ភ្លឺ</span>
+                            <span class="theme-english">Light</span>
+                        </span>
+                        <span class="theme-check">✓</span>
+                    </button>
+                    <button class="theme-option" data-theme="dark">
+                        <span class="theme-label">
+                            <span class="theme-khmer">ទម្រង់ងងឹត</span>
+                            <span class="theme-english">Dark</span>
+                        </span>
+                        <span class="theme-check">✓</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Left Sidebar -->
     <aside class="sidebar" id="sidebar">
-        <div class="sidebar-content">
-            <!-- Category: General Functions (Expandable) -->
-            <div class="sidebar-category">
-                <button class="category-toggle" onclick="toggleCategory(this)">
-                    <span class="category-icon">⚙️</span>
-                    <span class="category-text">
-                        <span class="category-khmer">មុខងារទូទៅ</span>
-                        <span class="category-english">General Functions</span>
+        <button class="sidebar-close" id="sidebarCloseButton" aria-label="Close navigation menu">
+            <span class="close-icon">✕</span>
+        </button>
+        <nav class="sidebar-nav">
+            <!-- General Functions -->
+            <details class="nav-group" open>
+                <summary class="nav-summary">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">
+                        <span class="nav-khmer">មុខងារទូទៅ</span>
+                        <span class="nav-english">General Functions</span>
                     </span>
-                    <span class="toggle-arrow">▼</span>
-                </button>
-                <ul class="sidebar-menu" id="generalFunctionsMenu">
-                    <li>
-                        <a href="#top-navigation" class="nav-link active">
-                            <span class="menu-icon">🔝</span>
-                            <span class="nav-text">
-                                <span class="nav-khmer">រូបតំណាងផ្នែកខាងលើ</span>
-                                <span class="nav-english">Top Navigation Icons</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#appearance-settings" class="nav-link">
-                            <span class="menu-icon">🎨</span>
-                            <span class="nav-text">
-                                <span class="nav-khmer">ការកំណត់រូបរាង</span>
-                                <span class="nav-english">Appearance</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#theme-color" class="nav-link">
-                            <span class="menu-icon">🌈</span>
-                            <span class="nav-text">
-                                <span class="nav-khmer">ពណ៌រូបរាង</span>
-                                <span class="nav-english">Theme Color</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#full-screen" class="nav-link">
-                            <span class="menu-icon">🖥️</span>
-                            <span class="nav-text">
-                                <span class="nav-khmer">ពេញអេក្រង់</span>
-                                <span class="nav-english">Full Screen</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#notifications" class="nav-link">
-                            <span class="menu-icon">🔔</span>
-                            <span class="nav-text">
-                                <span class="nav-khmer">ការជូនដំណឹង</span>
-                                <span class="nav-english">Notifications</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#user-profile" class="nav-link">
-                            <span class="menu-icon">👤</span>
-                            <span class="nav-text">
-                                <span class="nav-khmer">គណនីអ្នកប្រើប្រាស់</span>
-                                <span class="nav-english">User Profile</span>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    <span class="nav-arrow">▼</span>
+                </summary>
+                <div class="nav-items">
+                    <a href="#top-navigation" class="nav-link active">
+                        <span class="nav-icon">🔝</span>
+                        <span class="nav-text">
+                            <span class="nav-khmer">រូបតំណាងផ្នែកខាងលើ</span>
+                            <span class="nav-english">Top Navigation Icons</span>
+                        </span>
+                    </a>
+                    <a href="#appearance-settings" class="nav-link">
+                        <span class="nav-icon">🎨</span>
+                        <span class="nav-text">
+                            <span class="nav-khmer">ការកំណត់រូបរាង</span>
+                            <span class="nav-english">Appearance</span>
+                        </span>
+                    </a>
+                    <a href="#theme-color" class="nav-link">
+                        <span class="nav-icon">🌈</span>
+                        <span class="nav-text">
+                            <span class="nav-khmer">ពណ៌រូបរាង</span>
+                            <span class="nav-english">Theme Color</span>
+                        </span>
+                    </a>
+                    <a href="#full-screen" class="nav-link">
+                        <span class="nav-icon">🖥️</span>
+                        <span class="nav-text">
+                            <span class="nav-khmer">ពេញអេក្រង់</span>
+                            <span class="nav-english">Full Screen</span>
+                        </span>
+                    </a>
+                    <a href="#notifications" class="nav-link">
+                        <span class="nav-icon">🔔</span>
+                        <span class="nav-text">
+                            <span class="nav-khmer">ការជូនដំណឹង</span>
+                            <span class="nav-english">Notifications</span>
+                        </span>
+                    </a>
+                    <a href="#user-profile" class="nav-link">
+                        <span class="nav-icon">👤</span>
+                        <span class="nav-text">
+                            <span class="nav-khmer">គណនីអ្នកប្រើប្រាស់</span>
+                            <span class="nav-english">User Profile</span>
+                        </span>
+                    </a>
+                </div>
+            </details>
 
-            <!-- Company Main Category -->
-            <div class="sidebar-category">
-                <button class="category-toggle" onclick="toggleCategory(this)">
-                    <span class="category-icon">🏢</span>
-                    <span class="category-text">
-                        <span class="category-khmer">ក្រុមហ៊ុន</span>
-                        <span class="category-english">Company</span>
+            <!-- Company -->
+            <details class="nav-group">
+                <summary class="nav-summary">
+                    <span class="nav-icon">🏢</span>
+                    <span class="nav-text">
+                        <span class="nav-khmer">ក្រុមហ៊ុន</span>
+                        <span class="nav-english">Company</span>
                     </span>
-                    <span class="toggle-arrow">▼</span>
-                </button>
-                <ul class="sidebar-menu" id="companyMainMenu">
-                    <li>
-                        <a href="#company" class="nav-link">
-                            <span class="menu-icon">📋</span>
+                    <span class="nav-arrow">▼</span>
+                </summary>
+                <div class="nav-items">
+                    <details class="nav-subgroup">
+                        <summary class="nav-summary">
+                            <span class="nav-icon">📋</span>
                             <span class="nav-text">
                                 <span class="nav-khmer">ក្រុមហ៊ុន</span>
                                 <span class="nav-english">Company</span>
                             </span>
-                        </a>
-                        
-                        <!-- Company Functions Nested Submenu -->
-                        <div class="nested-submenu-container">
-                            <button class="nested-submenu-toggle" onclick="toggleNestedSubmenu(this)">
-                                <span class="nested-submenu-icon">⚙️</span>
-                                <span class="nested-submenu-text">
-                                    <span class="nested-submenu-khmer">មុខងារក្រុមហ៊ុន</span>
-                                    <span class="nested-submenu-english">Company Functions</span>
+                            <span class="nav-arrow">▶</span>
+                        </summary>
+                        <div class="nav-items">
+                            <a href="#company-search" class="nav-link">
+                                <span class="nav-icon">🔍</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">ស្វែងរក</span>
+                                    <span class="nav-english">Search</span>
                                 </span>
-                                <span class="nested-submenu-arrow">▶</span>
-                            </button>
-                            <ul class="nested-submenu" id="companyFunctionsSubmenu">
-                                <li>
-                                    <a href="#company-search" class="nav-link">
-                                        <span class="menu-icon">🔍</span>
-                                        <span class="nav-text">
-                                            <span class="nav-khmer">ស្វែងរក</span>
-                                            <span class="nav-english">Search</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#export-excel" class="nav-link">
-                                        <span class="menu-icon">📊</span>
-                                        <span class="nav-text">
-                                            <span class="nav-khmer">នាំចេញជា Excel</span>
-                                            <span class="nav-english">Export Excel</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#create-company" class="nav-link">
-                                        <span class="menu-icon">➕</span>
-                                        <span class="nav-text">
-                                            <span class="nav-khmer">បង្កើតក្រុមហ៊ុនថ្មី</span>
-                                            <span class="nav-english">Create New Company</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#upload-file" class="nav-link">
-                                        <span class="menu-icon">📁</span>
-                                        <span class="nav-text">
-                                            <span class="nav-khmer">បញ្ចូល File</span>
-                                            <span class="nav-english">Upload File</span>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
+                            </a>
+                            <a href="#export-excel" class="nav-link">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">នាំចេញជា Excel</span>
+                                    <span class="nav-english">Export Excel</span>
+                                </span>
+                            </a>
+                            <a href="#create-company" class="nav-link">
+                                <span class="nav-icon">➕</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">បង្កើតក្រុមហ៊ុនថ្មី</span>
+                                    <span class="nav-english">Create New Company</span>
+                                </span>
+                            </a>
+                            <a href="#upload-file" class="nav-link">
+                                <span class="nav-icon">📁</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">បញ្ចូល File</span>
+                                    <span class="nav-english">Upload File</span>
+                                </span>
+                            </a>
                         </div>
-                    </li>
-                    <li>
-                        <a href="#branch" class="nav-link">
-                            <span class="menu-icon">🏪</span>
-                            <span class="nav-text">
-                                <span class="nav-khmer">សាខា</span>
-                                <span class="nav-english">Branch</span>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+                    </details>
+                    <a href="#branch" class="nav-link">
+                        <span class="nav-icon">🏪</span>
+                        <span class="nav-text">
+                            <span class="nav-khmer">សាខា</span>
+                            <span class="nav-english">Branch</span>
+                        </span>
+                    </a>
+                </div>
+            </details>
+        </nav>
     </aside>
 
     <!-- Mobile Menu Toggle -->
-    <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+    <button class="mobile-menu-toggle" id="mobileMenuButton" type="button" aria-label="Toggle navigation menu">
         <span class="toggle-icon">☰</span>
     </button>
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -1368,4 +1367,15 @@
                             <span class="text-english">Review the data before clicking Save.</span>
                         </li>
                         <li>
-                            <span class="text-khmer">អ្នកប្រើប្រាស់អាចចុច <
+                            <span class="text-khmer">អ្នកប្រើប្រាស់អាចចុច <strong>បោះបង់</strong> ឬសញ្ញាព្រួញត្រឡប់ក្រោយ ដើម្បីត្រឡប់ទៅទំព័រក្រុមហ៊ុនដោយមិនរក្សាទុកព័ត៌មាន។</span>
+                            <span class="text-english">Click <strong>Cancel</strong> or the back arrow to return to the Company page without saving.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
