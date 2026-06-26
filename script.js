@@ -75,18 +75,30 @@ function initMobileMenu() {
 
 // Smooth Scroll for Navigation Links
 function initSmoothScroll() {
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+    document.querySelectorAll('.nav-link[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const target = document.querySelector(link.getAttribute("href"));
 
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 100;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            if (!target) {
+                console.error("Section not found:", link.getAttribute("href"));
+                return;
+            }
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+            document.querySelectorAll(".nav-link").forEach((item) => {
+                item.classList.remove("active");
+            });
+
+            link.classList.add("active");
+
+            if (window.innerWidth <= 768) {
+                closeMenu();
             }
         });
     });

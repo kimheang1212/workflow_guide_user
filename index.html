@@ -136,36 +136,83 @@
                                     <span class="nav-english">Search</span>
                                 </span>
                             </a>
-                            <a href="#export-excel" class="nav-link">
+                            <a href="#company-export-excel" class="nav-link">
                                 <span class="nav-icon">📊</span>
                                 <span class="nav-text">
                                     <span class="nav-khmer">នាំចេញជា Excel</span>
                                     <span class="nav-english">Export Excel</span>
                                 </span>
                             </a>
-                            <a href="#create-company" class="nav-link">
+                            <a href="#company-create" class="nav-link">
                                 <span class="nav-icon">➕</span>
                                 <span class="nav-text">
                                     <span class="nav-khmer">បង្កើតក្រុមហ៊ុនថ្មី</span>
                                     <span class="nav-english">Create New Company</span>
                                 </span>
                             </a>
-                            <a href="#upload-file" class="nav-link">
+                            <a href="#company-upload-file" class="nav-link">
                                 <span class="nav-icon">📁</span>
                                 <span class="nav-text">
                                     <span class="nav-khmer">បញ្ចូល File</span>
                                     <span class="nav-english">Upload File</span>
                                 </span>
                             </a>
+                            <a href="#company-update" class="nav-link">
+                                <span class="nav-icon">✏️</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">កែប្រែក្រុមហ៊ុន</span>
+                                    <span class="nav-english">Update Company</span>
+                                </span>
+                            </a>
                         </div>
                     </details>
-                    <a href="#branch" class="nav-link">
-                        <span class="nav-icon">🏪</span>
-                        <span class="nav-text">
-                            <span class="nav-khmer">សាខា</span>
-                            <span class="nav-english">Branch</span>
-                        </span>
-                    </a>
+                    <details class="nav-subgroup">
+                        <summary class="nav-summary">
+                            <span class="nav-icon">🏪</span>
+                            <span class="nav-text">
+                                <span class="nav-khmer">សាខា</span>
+                                <span class="nav-english">Branch</span>
+                            </span>
+                            <span class="nav-arrow">▶</span>
+                        </summary>
+                        <div class="nav-items">
+                            <a href="#branch-search" class="nav-link">
+                                <span class="nav-icon">🔍</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">ស្វែងរក</span>
+                                    <span class="nav-english">Search</span>
+                                </span>
+                            </a>
+                            <a href="#branch-export-excel" class="nav-link">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">នាំចេញជា Excel</span>
+                                    <span class="nav-english">Export Excel</span>
+                                </span>
+                            </a>
+                            <a href="#branch-create" class="nav-link">
+                                <span class="nav-icon">➕</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">បង្កើតសាខាថ្មី</span>
+                                    <span class="nav-english">Create New Branch</span>
+                                </span>
+                            </a>
+                            <a href="#branch-update" class="nav-link">
+                                <span class="nav-icon">✏️</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">កែប្រែសាខា</span>
+                                    <span class="nav-english">Update Branch</span>
+                                </span>
+                            </a>
+                            <a href="#branch-remove" class="nav-link">
+                                <span class="nav-icon">🗑️</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">លុបសាខា</span>
+                                    <span class="nav-english">Remove Branch</span>
+                                </span>
+                            </a>
+                        </div>
+                    </details>
                 </div>
             </details>
         </nav>
@@ -895,8 +942,8 @@
             </div>
         </section>
 
-        <!-- Export Excel Section -->
-        <section id="export-excel" class="content-section">
+        <!-- Company Export Excel Section -->
+        <section id="company-export-excel" class="content-section">
             <div class="section-header">
                 <div class="section-icon">📊</div>
                 <div class="section-title-group">
@@ -1002,7 +1049,7 @@
         </section>
 
         <!-- Create New Company Section -->
-        <section id="create-company" class="content-section">
+        <section id="company-create" class="content-section">
             <div class="section-header">
                 <div class="section-icon">➕</div>
                 <div class="section-title-group">
@@ -1127,7 +1174,7 @@
         </section>
 
         <!-- Upload File Section -->
-        <section id="upload-file" class="content-section">
+        <section id="company-upload-file" class="content-section">
             <div class="section-header">
                 <div class="section-icon">📁</div>
                 <div class="section-title-group">
@@ -1374,6 +1421,885 @@
                 </div>
             </div>
         </section>
+
+        <!-- Update Company Section -->
+        <section id="company-update" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">✏️</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">កែប្រែក្រុមហ៊ុន</span>
+                        <span class="title-english">Update Company</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់កែប្រែព័ត៌មានក្រុមហ៊ុនដែលមានរួចហើយ។ អ្នកប្រើត្រូវជ្រើសរើសក្រុមហ៊ុនពីតារាងជាមុនសិន ហើយបន្ទាប់មកចុចប៊ូតុង <strong>កែប្រែ</strong> ដើម្បីបើកទម្រង់កែប្រែព័ត៌មាន។</span>
+                        <span class="desc-english">This function is used to edit existing company information. The user must first select a company from the table, then click the <strong>Update</strong> button to open the edit form.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ជ្រើសរើសក្រុមហ៊ុន</span>
+                            <span class="content-english">Select Company</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចជួររបស់ក្រុមហ៊ុនក្នុងតារាងដើម្បីជ្រើសរើសកំណត់ត្រាដែលអ្នកចង់កែប្រែ។</span>
+                            <span class="text-english">Click a company row in the table to select the record you want to edit.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចុចប៊ូតុងកែប្រែ</span>
+                            <span class="content-english">Click Update</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បន្ទាប់ពីជ្រើសរើសក្រុមហ៊ុន ចុចប៊ូតុង <strong>កែប្រែ</strong> នៅផ្នែកខាងលើខាងស្តាំនៃទំព័រ។</span>
+                            <span class="text-english">After selecting the company, click the <strong>Update</strong> button at the top-right of the page.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">កែប្រែព័ត៌មានក្រុមហ៊ុន</span>
+                            <span class="content-english">Edit Company Information</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">កែប្រែព័ត៌មានក្រុមហ៊ុនក្នុងទម្រង់ ដូចជា ឈ្មោះក្រុមហ៊ុន ព័ត៌មានទំនាក់ទំនង អ៊ីមែល អាសយដ្ឋាន និងស្ថានភាពសកម្ម។</span>
+                            <span class="text-english">Update the company information in the form, such as company name, contact details, email, address, and active status.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">រក្សាទុក</span>
+                            <span class="content-english">Save</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុច <strong>រក្សាទុក</strong> ដើម្បីរក្សាទុកការផ្លាស់ប្តូរ។</span>
+                            <span class="text-english">Click <strong>Save</strong> to keep the changes.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">កែប្រែក្រុមហ៊ុន</span>
+                        <span class="title-english">Update Company</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/company edit1.jpg" alt="Select Company and Update Button" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/company edit2.jpg" alt="Edit Form" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📋</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំ</span>
+                        <span class="title-english">Important Note</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <ul class="feature-list">
+                        <li>
+                            <span class="text-khmer">ត្រូវជ្រើសរើសទិន្នន័យក្រុមហ៊ុននៅក្នុងតារាងជាមុនសិន បន្ទាប់មកទើបអាចចុចប៊ូតុង <strong>កែប្រែ</strong> បាន។</span>
+                            <span class="text-english">The user must select a company record in the table first before clicking the <strong>Update</strong> button.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Branch Section -->
+        <section id="branch-search" class="content-section">
+                <div class="section-header">
+                    <div class="section-icon">🔍</div>
+                    <div class="section-title-group">
+                        <h2 class="section-title">
+                            <span class="title-khmer">ស្វែងរកសាខា</span>
+                            <span class="title-english">Search Branch</span>
+                        </h2>
+                        <p class="section-description">
+                            <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់ស្វែងរកព័ត៌មានសាខាបានយ៉ាងរហ័ស។ អ្នកប្រើប្រាស់អាចបញ្ចូលលេខកូដសាខា ឈ្មោះសាខា ឈ្មោះក្រុមហ៊ុន អ៊ីមែល លេខទូរស័ព្ទ ឬអាសយដ្ឋានក្នុងប្រអប់ស្វែងរក។ ប្រព័ន្ធនឹងបង្ហាញតែលទ្ធផលដែលត្រូវនឹងពាក្យស្វែងរក។</span>
+                            <span class="desc-english">This function is used to quickly find branch information. Users can search by branch code, branch name, company name, email, phone number, or address. The system displays only matching results.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>
+                                <span class="content-khmer">ចូលទៅកាន់សាខា</span>
+                                <span class="content-english">Open Branch</span>
+                            </h3>
+                            <p>
+                                <span class="text-khmer">ចុចលើ <strong>ក្រុមហ៊ុន > សាខា</strong>។</span>
+                                <span class="text-english">Go to <strong>Company > Branch</strong>.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>
+                                <span class="content-khmer">បញ្ចូលពាក្យស្វែងរក</span>
+                                <span class="content-english">Enter Search Keyword</span>
+                            </h3>
+                            <p>
+                                <span class="text-khmer">បញ្ចូលពាក្យស្វែងរកក្នុងប្រអប់ <strong>Search</strong>។</span>
+                                <span class="text-english">Enter a keyword in the <strong>Search</strong> box.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>
+                                <span class="content-khmer">ពិនិត្យលទ្ធផល</span>
+                                <span class="content-english">Review Results</span>
+                            </h3>
+                            <p>
+                                <span class="text-khmer">ពិនិត្យព័ត៌មានសាខាដែលបង្ហាញក្នុងតារាង។</span>
+                                <span class="text-english">Review the matching branch records displayed in the table.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-header">
+                        <span class="screenshot-icon">📸</span>
+                        <h3 class="screenshot-title">
+                            <span class="title-khmer">ស្វែងរកសាខា</span>
+                            <span class="title-english">Search Branch</span>
+                        </h3>
+                    </div>
+                    <div class="screenshot-body">
+                        <div class="image-container">
+                            <img src="images/branch search1.jpg" alt="Search Branch" class="screenshot-image" loading="lazy">
+                            <div class="image-overlay">
+                                <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <!-- Export Branch Excel Section -->
+        <section id="branch-export-excel" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">នាំចេញជា Excel</span>
+                        <span class="title-english">Export Excel</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់នាំចេញបញ្ជីសាខាទៅជា File Excel ដើម្បីរក្សាទុក ឬប្រើប្រាស់បន្ថែម។ អ្នកប្រើប្រាស់អាចចុចប៊ូតុង <strong>Excel</strong> នៅលើទំព័រ <strong>សាខា</strong> ហើយជ្រើសរើសទីតាំងរក្សាទុកឯកសារ។</span>
+                        <span class="desc-english">This function is used to export the branch list to an Excel file for saving or further use. Users can click the <strong>Excel</strong> button on the <strong>Branch</strong> page and choose a location to save the file.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បើកទំព័រសាខា</span>
+                            <span class="content-english">Open Branch Page</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុច <strong>ក្រុមហ៊ុន > សាខា</strong>។</span>
+                            <span class="text-english">Go to <strong>Company > Branch</strong>.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចុចប៊ូតុង Excel</span>
+                            <span class="content-english">Click the Excel Button</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចប៊ូតុង <strong>Excel</strong> នៅខាងលើតារាងសាខា។</span>
+                            <span class="text-english">Click the <strong>Excel</strong> button above the branch table.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ជ្រើសរើសទីតាំងរក្សាទុក</span>
+                            <span class="content-english">Choose Save Location</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ជ្រើសរើសទីតាំងដែលអ្នកចង់រក្សាទុកឯកសារ Excel។</span>
+                            <span class="text-english">Choose where you want to save the Excel file.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">កំណត់ឈ្មោះឯកសារ និងរក្សាទុក</span>
+                            <span class="content-english">Set File Name and Save</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បញ្ជាក់ឈ្មោះ File ហើយចុច <strong>Save</strong>។</span>
+                            <span class="text-english">Confirm the file name and click <strong>Save</strong>.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ពិនិត្យឯកសារ Excel</span>
+                            <span class="content-english">Review the Excel File</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បើក File Excel ដើម្បីពិនិត្យទិន្នន័យសាខាដែលបាននាំចេញ។</span>
+                            <span class="text-english">Open the Excel file to review the exported branch data.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">នាំចេញព័ត៌មានសាខាជា Excel</span>
+                        <span class="title-english">Export Branch Information to Excel</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/branch export1.jpg" alt="Branch Page with Excel Button" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/branch export2.jpg" alt="Save Dialog" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/branch export3.jpg" alt="Exported Excel File" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📋</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំ</span>
+                        <span class="title-english">Notes</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <ul class="feature-list">
+                        <li>
+                            <span class="text-khmer">ឯកសារ Excel ដែលបាននាំចេញត្រូវបង្ហាញព័ត៌មានសាខាដូចក្នុងតារាង ដូចជា៖</span>
+                            <span class="text-english">The exported Excel file should contain the same branch data shown in the table, such as:</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ល.រ / No.</span>
+                            <span class="text-english">No.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">លេខកូដសាខា / Branch Code</span>
+                            <span class="text-english">Branch Code</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ឈ្មោះ / Name</span>
+                            <span class="text-english">Name</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">អ៊ីមែល / Email</span>
+                            <span class="text-english">Email</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">លេខទូរស័ព្ទ / Phone Number</span>
+                            <span class="text-english">Phone Number</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">អាសយដ្ឋាន / Address</span>
+                            <span class="text-english">Address</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Create New Branch Section -->
+        <section id="branch-create" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">➕</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">បង្កើតសាខាថ្មី</span>
+                        <span class="title-english">Create New Branch</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់បង្កើតព័ត៌មានសាខាថ្មី និងភ្ជាប់សាខាទៅក្រុមហ៊ុនដែលពាក់ព័ន្ធ។</span>
+                        <span class="desc-english">This function is used to create a new branch and link it to the related company.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចូលទៅកាន់សាខា</span>
+                            <span class="content-english">Open Branch</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចូលទៅកាន់ <strong>ក្រុមហ៊ុន > សាខា</strong> ហើយចុចប៊ូតុង <strong>បន្ថែម / Add</strong>។</span>
+                            <span class="text-english">Go to <strong>Company > Branch</strong>, then click the <strong>Add</strong> button.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បំពេញព័ត៌មានសាខា</span>
+                            <span class="content-english">Enter Branch Information</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បំពេញព័ត៌មានសំខាន់ៗក្នុងទម្រង់បង្កើតសាខា។ វាលដែលមានសញ្ញា <code>*</code> ជាវាលតម្រូវឱ្យបំពេញ។</span>
+                            <span class="text-english">Fill in the branch information form. Fields marked with <code>*</code> are required.</span>
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="text-khmer"><strong>លេខកូដ / Code***</strong> — បញ្ចូលលេខកូដសាខាដែលមិនស្ទួន។</span>
+                                <span class="text-english"><strong>Code***</strong> — Enter a unique branch code.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><strong>ក្រុមហ៊ុន / Company***</strong> — ជ្រើសរើសក្រុមហ៊ុនដែលសាខានេះស្ថិតនៅក្រោម។</span>
+                                <span class="text-english"><strong>Company***</strong> — Select the company that this branch belongs to.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><strong>ឈ្មោះ / Name***</strong> — បញ្ចូលឈ្មោះសាខា។</span>
+                                <span class="text-english"><strong>Name***</strong> — Enter the branch name.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><strong>លេខទូរស័ព្ទ / Phone Number</strong> — បំពេញនៅពេលមានព័ត៌មាន។</span>
+                                <span class="text-english"><strong>Phone Number</strong> — Enter when available.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><strong>អ៊ីមែល / Email</strong> — បំពេញអ៊ីមែលសាខា ប្រសិនបើមាន។</span>
+                                <span class="text-english"><strong>Email</strong> — Enter the branch email when available.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><strong>អាសយដ្ឋាន / Address</strong> — បំពេញអាសយដ្ឋានសាខា ប្រសិនបើមាន។</span>
+                                <span class="text-english"><strong>Address</strong> — Enter the branch address when available.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><strong>សាខាលំនាំដើម / Default Branch</strong> — ធីកជម្រើសនេះ ប្រសិនបើសាខានេះត្រូវប្រើជាសាខាលំនាំដើម។</span>
+                                <span class="text-english"><strong>Default Branch</strong> — Select this option only when this branch should be the default branch.</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer"><strong>លេខកូដថេរ / Persistent Code</strong> — ធីកជម្រើសនេះ ប្រសិនបើលេខកូដសាខាត្រូវរក្សាទុកជាលេខកូដថេរ។</span>
+                                <span class="text-english"><strong>Persistent Code</strong> — Select this option when the branch code should remain permanent.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">រក្សាទុកព័ត៌មាន</span>
+                            <span class="content-english">Save Information</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បន្ទាប់ពីបំពេញព័ត៌មានតម្រូវរួច ចុច <strong>រក្សាទុក / Save</strong> ដើម្បីបង្កើតសាខាថ្មី។</span>
+                            <span class="text-english">After completing the required information, click <strong>Save</strong> to create the new branch.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">បង្កើតសាខាថ្មី</span>
+                        <span class="title-english">Create New Branch</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/branch create1.jpg" alt="Branch List Page" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/branch create2.jpg" alt="Add Branch Form" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/branch create3.jpg" alt="Newly Created Branch" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📋</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំ</span>
+                        <span class="title-english">Notes</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <ul class="feature-list">
+                        <li>
+                            <span class="text-khmer">ត្រូវបំពេញវាលដែលមានសញ្ញា <code>*</code>។</span>
+                            <span class="text-english">Complete all fields marked with <code>*</code>.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ត្រូវជ្រើសរើសក្រុមហ៊ុនមុនពេលរក្សាទុកសាខា។</span>
+                            <span class="text-english">Select a company before saving the branch.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">លេខកូដសាខាមិនគួរស្ទួនជាមួយសាខាផ្សេងទៀត។</span>
+                            <span class="text-english">The branch code should be unique.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">អ្នកប្រើប្រាស់អាចចុច <strong>បោះបង់ / Cancel</strong> ឬព្រួញត្រឡប់ក្រោយ ដើម្បីត្រឡប់ទៅទំព័រសាខាដោយមិនរក្សាទុក។</span>
+                            <span class="text-english">Users can click <strong>Cancel</strong> or the back arrow to return to the Branch page without saving.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Update Branch Section -->
+        <section id="branch-update" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">✏️</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">កែប្រែសាខា</span>
+                        <span class="title-english">Update Branch</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់កែប្រែព័ត៌មានសាខាដែលមានរួចហើយ។ អ្នកប្រើប្រាស់ត្រូវជ្រើសរើសសាខាពីតារាងជាមុនសិន ហើយបន្ទាប់មកចុចប៊ូតុង <strong>កែប្រែ / Update</strong>។</span>
+                        <span class="desc-english">This function is used to edit existing branch information. Users must first select a branch record from the table, then click the <strong>Update</strong> button.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">⚠️</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំសំខាន់</span>
+                        <span class="title-english">Important Note</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="info-box">
+                        <p>
+                            <span class="text-khmer">ត្រូវជ្រើសរើសទិន្នន័យសាខាក្នុងតារាងជាមុនសិន ទើបអាចចុចប៊ូតុង <strong>កែប្រែ / Update</strong> បាន។</span>
+                            <span class="text-english">Users must select a branch record in the table before clicking the <strong>Update</strong> button.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ជ្រើសរើសសាខា</span>
+                            <span class="content-english">Select Branch</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើជួរដេកសាខាដែលចង់កែប្រែក្នុងតារាង។ ជួរដេកដែលបានជ្រើសរើសនឹងបង្ហាញពណ៌សម្គាល់។</span>
+                            <span class="text-english">Click the branch row that you want to edit. The selected row will be highlighted.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចុចកែប្រែ</span>
+                            <span class="content-english">Click Update</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បន្ទាប់ពីជ្រើសរើសសាខា ចុចប៊ូតុង <strong>កែប្រែ / Update</strong> នៅផ្នែកខាងលើនៃទំព័រ។</span>
+                            <span class="text-english">After selecting the branch, click the <strong>Update</strong> button at the top of the page.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">កែប្រែព័ត៌មានសាខា</span>
+                            <span class="content-english">Edit Branch Information</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">កែប្រែព័ត៌មានសាខាតាមតម្រូវការ។ ពិនិត្យព័ត៌មានសំខាន់ៗដូចជា៖</span>
+                            <span class="text-english">Update the branch information as needed, including:</span>
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="text-khmer">លេខកូដសាខា / Branch Code</span>
+                                <span class="text-english">Branch Code</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">ក្រុមហ៊ុន / Company</span>
+                                <span class="text-english">Company</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">ឈ្មោះសាខា / Branch Name</span>
+                                <span class="text-english">Branch Name</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">លេខទូរស័ព្ទ / Phone Number</span>
+                                <span class="text-english">Phone Number</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">អ៊ីមែល / Email</span>
+                                <span class="text-english">Email</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">អាសយដ្ឋាន / Address</span>
+                                <span class="text-english">Address</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">សាខាលំនាំដើម / Default Branch</span>
+                                <span class="text-english">Default Branch</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">លេខកូដថេរ / Persistent Code</span>
+                                <span class="text-english">Persistent Code</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">រក្សាទុកព័ត៌មាន</span>
+                            <span class="content-english">Save Information</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បន្ទាប់ពីកែប្រែព័ត៌មានរួច ចុច <strong>រក្សាទុក / Save</strong> ដើម្បីបញ្ជាក់ការកែប្រែ។</span>
+                            <span class="text-english">After updating the information, click <strong>Save</strong> to confirm the changes.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">កែប្រែសាខា</span>
+                        <span class="title-english">Update Branch</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/branch edit1.jpg" alt="Select Branch and Update Button" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/branch edit2.jpg" alt="Edit Branch Form" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/branch edit3.jpg" alt="Save Button" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📋</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំ</span>
+                        <span class="title-english">Notes</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <ul class="feature-list">
+                        <li>
+                            <span class="text-khmer">ត្រូវបំពេញវាលដែលមានសញ្ញា <code>*</code>។</span>
+                            <span class="text-english">Complete all fields marked with <code>*</code>.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">កុំប្តូរលេខកូដសាខា ប្រសិនបើវាត្រូវបានប្រើប្រាស់ក្នុងប្រព័ន្ធរួចហើយ។</span>
+                            <span class="text-english">Do not change the branch code if it is already being used by the system.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">អ្នកប្រើប្រាស់អាចចុច <strong>បោះបង់ / Cancel</strong> ឬព្រួញត្រឡប់ក្រោយ ដើម្បីត្រឡប់ទៅទំព័រសាខាដោយមិនរក្សាទុក។</span>
+                            <span class="text-english">Users can click <strong>Cancel</strong> or the back arrow to return to the Branch page without saving.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Remove Branch Section -->
+        <section id="branch-remove" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🗑️</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">លុបសាខា</span>
+                        <span class="title-english">Remove Branch</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់លុបទិន្នន័យសាខាដែលមានរួចហើយចេញពីប្រព័ន្ធ។ អ្នកប្រើប្រាស់ត្រូវជ្រើសរើសសាខាពីតារាងជាមុនសិន ហើយបន្ទាប់មកចុចប៊ូតុង <strong>លុប / Remove</strong>។</span>
+                        <span class="desc-english">This function is used to remove an existing branch record from the system. Users must first select a branch record from the table, then click the <strong>Remove</strong> button.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">⚠️</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំសំខាន់</span>
+                        <span class="title-english">Important Note</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="info-box">
+                        <p>
+                            <span class="text-khmer">ត្រូវជ្រើសរើសទិន្នន័យសាខាក្នុងតារាងជាមុនសិន ទើបអាចចុចប៊ូតុង <strong>លុប / Remove</strong> បាន។</span>
+                            <span class="text-english">Users must select a branch record in the table before clicking the <strong>Remove</strong> button.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ជ្រើសរើសសាខា</span>
+                            <span class="content-english">Select Branch</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើជួរដេកសាខាដែលចង់លុបក្នុងតារាង។ ជួរដេកដែលបានជ្រើសរើសនឹងបង្ហាញពណ៌សម្គាល់។</span>
+                            <span class="text-english">Click the branch row that you want to remove. The selected row will be highlighted.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចុចប៊ូតុងលុប</span>
+                            <span class="content-english">Click Remove</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បន្ទាប់ពីជ្រើសរើសសាខា ចុចប៊ូតុង <strong>លុប / Remove</strong> នៅផ្នែកខាងលើនៃទំព័រ។</span>
+                            <span class="text-english">After selecting the branch, click the <strong>Remove</strong> button at the top of the page.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ពិនិត្យព័ត៌មានសាខា</span>
+                            <span class="content-english">Review Branch Information</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ប្រព័ន្ធនឹងបង្ហាញព័ត៌មានសាខាដែលត្រូវលុប។ សូមពិនិត្យព័ត៌មានសំខាន់ៗឱ្យបានត្រឹមត្រូវ មុនពេលបញ្ជាក់ការលុប ដូចជា៖</span>
+                            <span class="text-english">The system will display the branch information to be removed. Review the important information carefully before confirming, such as:</span>
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="text-khmer">លេខកូដសាខា / Branch Code</span>
+                                <span class="text-english">Branch Code</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">ក្រុមហ៊ុន / Company</span>
+                                <span class="text-english">Company</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">ឈ្មោះសាខា / Branch Name</span>
+                                <span class="text-english">Branch Name</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">លេខទូរស័ព្ទ / Phone Number</span>
+                                <span class="text-english">Phone Number</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">អ៊ីមែល / Email</span>
+                                <span class="text-english">Email</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">អាសយដ្ឋាន / Address</span>
+                                <span class="text-english">Address</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">សាខាលំនាំដើម / Default Branch</span>
+                                <span class="text-english">Default Branch</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">លេខកូដថេរ / Persistent Code</span>
+                                <span class="text-english">Persistent Code</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បញ្ជាក់ការលុប</span>
+                            <span class="content-english">Confirm Remove</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បន្ទាប់ពីពិនិត្យព័ត៌មានរួច ចុច <strong>លុប / Remove</strong> ដើម្បីបញ្ជាក់ការលុបសាខា។</span>
+                            <span class="text-english">After reviewing the information, click <strong>Remove</strong> to confirm the branch removal.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">លុបសាខា</span>
+                        <span class="title-english">Remove Branch</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/branch search1.jpg" alt="Select Branch and Remove Button" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/branch edit2.jpg" alt="Branch Information Review" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/branch edit3.jpg" alt="Confirm Remove Button" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📋</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំ</span>
+                        <span class="title-english">Notes</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <ul class="feature-list">
+                        <li>
+                            <span class="text-khmer">សូមពិនិត្យឱ្យបានច្បាស់មុនពេលលុប ព្រោះការលុបអាចប៉ះពាល់ដល់ទិន្នន័យពាក់ព័ន្ធ។</span>
+                            <span class="text-english">Please review carefully before removing, because deletion may affect related data.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ប្រសិនបើមិនចង់បន្ត អ្នកប្រើប្រាស់អាចចុច <strong>បោះបង់ / Cancel</strong> ឬព្រួញត្រឡប់ក្រោយ ដើម្បីត្រឡប់ទៅទំព័រ <strong>សាខា / Branch</strong>។</span>
+                            <span class="text-english">If the user does not want to continue, they can click <strong>Cancel</strong> or the back arrow to return to the <strong>Branch</strong> page.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">លុបតែសាខាដែលត្រឹមត្រូវប៉ុណ្ណោះ។</span>
+                            <span class="text-english">Remove only the correct branch record.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script src="script.js" defer></script>
