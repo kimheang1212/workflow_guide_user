@@ -532,6 +532,12 @@ html[lang="km"] * {
     scroll-margin-top: calc(var(--header-height) + 2rem);
 }
 
+#company-create,
+#company-upload-file,
+#company-update {
+    scroll-margin-top: 110px;
+}
+
 /* Function Links Container */
 .function-links-container {
     background: var(--bg-surface);
