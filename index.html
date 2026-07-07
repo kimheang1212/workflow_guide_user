@@ -215,6 +215,66 @@
                     </details>
                 </div>
             </details>
+            <!-- Users -->
+            <details class="nav-group">
+                <summary class="nav-summary">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">
+                        <span class="nav-khmer">អ្នកប្រើប្រាស់</span>
+                        <span class="nav-english">Users</span>
+                    </span>
+                    <span class="nav-arrow">▼</span>
+                </summary>
+                <div class="nav-items">
+                    <a href="#users-web-admin" class="nav-link">
+                        <span class="nav-icon">👤</span>
+                        <span class="nav-text">
+                            <span class="nav-khmer">អ្នកប្រើប្រាស់ Web Admin</span>
+                            <span class="nav-english">Web Admin Users</span>
+                        </span>
+                    </a>
+                    <details class="nav-subgroup">
+                        <summary class="nav-summary">
+                            <span class="nav-icon">🔐</span>
+                            <span class="nav-text">
+                                <span class="nav-khmer">តួនាទី</span>
+                                <span class="nav-english">Roles</span>
+                            </span>
+                            <span class="nav-arrow">▶</span>
+                        </summary>
+                        <div class="nav-items">
+                            <a href="#users-roles" class="nav-link">
+                                <span class="nav-icon">🔐</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">តួនាទី</span>
+                                    <span class="nav-english">Roles</span>
+                                </span>
+                            </a>
+                            <a href="#users-roles-search" class="nav-link">
+                                <span class="nav-icon">🔍</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">ស្វែងរកតួនាទី</span>
+                                    <span class="nav-english">Search Roles</span>
+                                </span>
+                            </a>
+                            <a href="#users-roles-export-excel" class="nav-link">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">
+                                    <span class="nav-khmer">នាំចេញជា Excel</span>
+                                    <span class="nav-english">Export Excel</span>
+                                </span>
+                            </a>
+                        </div>
+                    </details>
+                    <a href="#users-usage-history" class="nav-link">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">
+                            <span class="nav-khmer">ប្រវត្តិប្រើប្រាស់</span>
+                            <span class="nav-english">Usage History</span>
+                        </span>
+                    </a>
+                </div>
+            </details>
         </nav>
     </aside>
 
@@ -839,21 +899,21 @@
                             <span class="text-english">Search Company</span>
                         </span>
                     </a>
-                    <a href="#export-excel" class="function-link">
+                    <a href="#company-export-excel" class="function-link">
                         <span class="function-link-icon">📊</span>
                         <span class="function-link-text">
                             <span class="text-khmer">នាំចេញជា Excel</span>
                             <span class="text-english">Export Excel</span>
                         </span>
                     </a>
-                    <a href="#create-company" class="function-link">
+                    <a href="#company-create" class="function-link">
                         <span class="function-link-icon">➕</span>
                         <span class="function-link-text">
                             <span class="text-khmer">បង្កើតក្រុមហ៊ុនថ្មី</span>
                             <span class="text-english">Create New Company</span>
                         </span>
                     </a>
-                    <a href="#upload-file" class="function-link">
+                    <a href="#company-upload-file" class="function-link">
                         <span class="function-link-icon">📁</span>
                         <span class="function-link-text">
                             <span class="text-khmer">បញ្ចូល File</span>
@@ -862,6 +922,7 @@
                     </a>
                 </div>
             </div>
+        </section>
 
         <!-- Search Company Section -->
         <section id="company-search" class="content-section">
@@ -2296,6 +2357,546 @@
                             <span class="text-english">Remove only the correct branch record.</span>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Users Section -->
+        <section id="users-main" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">👥</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">អ្នកប្រើប្រាស់</span>
+                        <span class="title-english">Users</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">ផ្នែកអ្នកប្រើប្រាស់ប្រើសម្រាប់គ្រប់គ្រងព័ត៌មានអ្នកប្រើប្រាស់ តួនាទី និងប្រវត្តិប្រើប្រាស់ក្នុងប្រព័ន្ធ។</span>
+                        <span class="desc-english">The Users section is used to manage user information, roles, and usage history in the system.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Users Functions Quick Links -->
+            <div class="function-links-container">
+                <h3 class="function-links-title">
+                    <span class="title-khmer">មុខងារអ្នកប្រើប្រាស់</span>
+                    <span class="title-english">Users Functions</span>
+                </h3>
+                <div class="function-links-grid">
+                    <a href="#users-web-admin" class="function-link">
+                        <span class="function-link-icon">👤</span>
+                        <span class="function-link-text">
+                            <span class="text-khmer">អ្នកប្រើប្រាស់ Web Admin</span>
+                            <span class="text-english">Web Admin Users</span>
+                        </span>
+                    </a>
+                    <a href="#users-roles" class="function-link">
+                        <span class="function-link-icon">🔐</span>
+                        <span class="function-link-text">
+                            <span class="text-khmer">តួនាទី</span>
+                            <span class="text-english">Roles</span>
+                        </span>
+                    </a>
+                    <a href="#users-roles-search" class="function-link">
+                        <span class="function-link-icon">🔍</span>
+                        <span class="function-link-text">
+                            <span class="text-khmer">ស្វែងរកតួនាទី</span>
+                            <span class="text-english">Search Roles</span>
+                        </span>
+                    </a>
+                    <a href="#users-usage-history" class="function-link">
+                        <span class="function-link-icon">📊</span>
+                        <span class="function-link-text">
+                            <span class="text-khmer">ប្រវត្តិប្រើប្រាស់</span>
+                            <span class="text-english">Usage History</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Admin Users Section -->
+        <section id="users-web-admin" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">👤</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">អ្នកប្រើប្រាស់ Web Admin</span>
+                        <span class="title-english">Web Admin Users</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">ផ្នែកនេះប្រើសម្រាប់គ្រប់គ្រងព័ត៌មានអ្នកប្រើប្រាស់ Web Admin ដែលមានសិទ្ធិចូលប្រើប្រាស់ប្រព័ន្ធ។</span>
+                        <span class="desc-english">This section is used to manage Web Admin user information who have system access permissions.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">អ្នកប្រើប្រាស់ Web Admin</span>
+                        <span class="title-english">Web Admin Users</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/Untitled.png" alt="Web Admin Users" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roles Section -->
+        <section id="users-roles" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🔐</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">តួនាទី</span>
+                        <span class="title-english">Roles</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារ <strong>តួនាទី</strong> ប្រើសម្រាប់គ្រប់គ្រងតួនាទីរបស់អ្នកប្រើប្រាស់នៅក្នុងប្រព័ន្ធ។ តួនាទីនីមួយៗអាចប្រើសម្រាប់កំណត់សិទ្ធិប្រើប្រាស់ និងការចូលដំណើរការមុខងារផ្សេងៗក្នុងប្រព័ន្ធ។</span>
+                        <span class="desc-english">The <strong>Roles</strong> function is used to manage user roles in the system. Each role is used to define permissions and access to different system functions.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចូលទៅកាន់ផ្ទាំងតួនាទី</span>
+                            <span class="content-english">Access Roles Page</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើ <strong>អ្នកប្រើប្រាស់ > តួនាទី</strong> នៅក្នុង sidebar ដើម្បីបើកផ្ទាំងតួនាទី។</span>
+                            <span class="text-english">Click <strong>Users > Roles</strong> in the sidebar to open the Roles page.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">មើលបញ្ជីតួនាទី</span>
+                            <span class="content-english">View Roles List</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ប្រព័ន្ធនឹងបង្ហាញបញ្ជីតួនាទីទាំងអស់ដែលមានក្នុងប្រព័ន្ធ។ អ្នកប្រើប្រាស់អាចមើលព័ត៌មានលម្អិតរបស់តួនាទីនីមួយៗដូចជា៖ ឈ្មោះ សិទ្ធិ និងស្ថានភាព។</span>
+                            <span class="text-english">The system will display a list of all roles in the system. Users can view detailed information for each role such as: name, permissions, and status.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">គ្រប់គ្រងតួនាទី</span>
+                            <span class="content-english">Manage Roles</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">តួនាទី (Role) ប្រើសម្រាប់៖</span>
+                            <span class="text-english">Role is used to:</span>
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="text-khmer">កំណត់សិទ្ធិរបស់អ្នកប្រើប្រាស់</span>
+                                <span class="text-english">Define user permissions</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">បែងចែកការចូលប្រើមុខងារផ្សេងៗ</span>
+                                <span class="text-english">Control access to different functions</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">គ្រប់គ្រងថាអ្នកណាអាចមើល បន្ថែម កែប្រែ ឬលុបទិន្នន័យ</span>
+                                <span class="text-english">Manage who can view, create, update, or delete data</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">ជួយរៀបចំការងារតាមភារកិច្ចរបស់អ្នកប្រើប្រាស់</span>
+                                <span class="text-english">Organize work based on user responsibilities</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">តួនាទី</span>
+                        <span class="title-english">Roles</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/role search1.jpg" alt="Roles List" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roles Search Section -->
+        <section id="users-roles-search" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">🔍</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">ស្វែងរកតួនាទី</span>
+                        <span class="title-english">Search Roles</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់ស្វែងរកតួនាទីនៅក្នុងបញ្ជីតួនាទី។ អ្នកប្រើប្រាស់អាចស្វែងរកបានតាម <strong>ឈ្មោះ</strong>។</span>
+                        <span class="desc-english">This function is used to search for roles in the role list. Users can search by <strong>name</strong>.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចូលទៅកាន់ផ្ទាំងតួនាទី</span>
+                            <span class="content-english">Go to Roles Page</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើ <strong>អ្នកប្រើប្រាស់ > តួនាទី</strong> នៅក្នុង sidebar ដើម្បីបើកផ្ទាំងតួនាទី។</span>
+                            <span class="text-english">Click <strong>Users > Roles</strong> in the sidebar to open the Roles page.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">បញ្ចូលឈ្មោះក្នុងប្រអប់ស្វែងរក</span>
+                            <span class="content-english">Enter Name in Search Box</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">វាយឈ្មោះតួនាទីនៅក្នុងប្រអប់ស្វែងរក។ ប្រព័ន្ធអាចស្វែងរកបានតាម <strong>ឈ្មោះ</strong>។</span>
+                            <span class="text-english">Enter the role name in the search box. The system can search by <strong>name</strong>.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">មើលលទ្ធផល</span>
+                            <span class="content-english">View Results</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បន្ទាប់ពីវាយឈ្មោះ ប្រព័ន្ធនឹងបង្ហាញលទ្ធផលតួនាទីដែលត្រូវនឹងពាក្យស្វែងរក។</span>
+                            <span class="text-english">After entering the name, the system will display matching role results.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ស្វែងរកតួនាទី</span>
+                        <span class="title-english">Search Roles</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/role search1.jpg" alt="Search Roles" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📋</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំ</span>
+                        <span class="title-english">Important Notes</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <ul class="feature-list">
+                        <li>
+                            <span class="text-khmer">អាចស្វែងរកបានតាម <strong>ឈ្មោះតួនាទី</strong></span>
+                            <span class="text-english">Search is available by <strong>role name</strong></span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">លទ្ធផលនឹងបង្ហាញនៅក្នុងតារាងខាងក្រោម</span>
+                            <span class="text-english">Results will be displayed in the table below</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ប្រសិនបើគ្មានទិន្នន័យត្រូវគ្នា នឹងមិនបង្ហាញលទ្ធផល</span>
+                            <span class="text-english">If no matching data is found, no result will be shown</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roles Export Excel Section -->
+        <section id="users-roles-export-excel" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">នាំចេញតួនាទីជា Excel</span>
+                        <span class="title-english">Export Roles to Excel</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់នាំចេញបញ្ជីតួនាទីទៅជា File Excel ដើម្បីរក្សាទុក ឬប្រើប្រាស់បន្ថែម។</span>
+                        <span class="desc-english">This function is used to export the role list to an Excel file for saving or further use.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចូលទៅកាន់តួនាទី</span>
+                            <span class="content-english">Open Roles</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចូលទៅកាន់ <strong>អ្នកប្រើប្រាស់ > តួនាទី > តួនាទី</strong> ដើម្បីបើកទំព័របញ្ជីតួនាទី។</span>
+                            <span class="text-english">Go to <strong>Users > Roles > Roles</strong> to open the Roles list page.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចុចប៊ូតុង Excel</span>
+                            <span class="content-english">Click the Excel Button</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចប៊ូតុង <strong>Excel</strong> នៅខាងលើតារាងតួនាទី។</span>
+                            <span class="text-english">Click the <strong>Excel</strong> button above the Roles table.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ជ្រើសរើសទីតាំងរក្សាទុក</span>
+                            <span class="content-english">Choose Save Location</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ជ្រើសរើសទីតាំងសម្រាប់រក្សាទុកឯកសារ Excel ហើយកំណត់ឈ្មោះឯកសារ។</span>
+                            <span class="text-english">Choose a location to save the Excel file and enter the file name.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">រក្សាទុកឯកសារ</span>
+                            <span class="content-english">Save the File</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចប៊ូតុង <strong>Save</strong> ដើម្បីរក្សាទុកឯកសារ Excel។</span>
+                            <span class="text-english">Click <strong>Save</strong> to save the Excel file.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ពិនិត្យឯកសារ Excel</span>
+                            <span class="content-english">Review the Excel File</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">បើកឯកសារ Excel ដើម្បីពិនិត្យព័ត៌មានតួនាទីដែលបាននាំចេញ។</span>
+                            <span class="text-english">Open the Excel file to review the exported role information.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">នាំចេញតួនាទីជា Excel</span>
+                        <span class="title-english">Export Roles to Excel</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/role export excel1.jpg" alt="Roles Page with Excel Button" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/role export excel2.jpg" alt="Excel Button Highlighted" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/role export excel3.jpg" alt="Save As Dialog" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/role export excel4.jpg" alt="Exported Excel File" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📋</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ចំណាំ</span>
+                        <span class="title-english">Notes</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <ul class="feature-list">
+                        <li>
+                            <span class="text-khmer">ទិន្នន័យដែលនាំចេញត្រូវតែដូចគ្នានឹងទិន្នន័យក្នុងតារាងតួនាទី។</span>
+                            <span class="text-english">Exported data must match the Roles table data.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ប្រសិនបើមានការស្វែងរក ត្រូវនាំចេញតែលទ្ធផលដែលកំពុងបង្ហាញក្នុងតារាង។</span>
+                            <span class="text-english">When search is applied, export only the results currently shown in the table.</span>
+                        </li>
+                        <li>
+                            <span class="text-khmer">ឯកសារត្រូវរក្សាទុកជា <code>.xlsx</code>។</span>
+                            <span class="text-english">The file must be saved as <code>.xlsx</code>.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage History Section -->
+        <section id="users-usage-history" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <div class="section-title-group">
+                    <h2 class="section-title">
+                        <span class="title-khmer">ប្រវត្តិប្រើប្រាស់</span>
+                        <span class="title-english">Usage History</span>
+                    </h2>
+                    <p class="section-description">
+                        <span class="desc-khmer">មុខងារនេះប្រើសម្រាប់មើលប្រវត្តិការប្រើប្រាស់ប្រព័ន្ធរបស់អ្នកប្រើប្រាស់ ដូចជា ពេលវេលាចូល សកម្មភាព និងការប្រើប្រាស់មុខងារផ្សេងៗ។</span>
+                        <span class="desc-english">This function is used to view user system usage history, such as login time, activity, and usage of different functions.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ចូលទៅកាន់ប្រវត្តិប្រើប្រាស់</span>
+                            <span class="content-english">Access Usage History</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ចុចលើ <strong>អ្នកប្រើប្រាស់ > ប្រវត្តិប្រើប្រាស់</strong> នៅក្នុង sidebar ដើម្បីមើលប្រវត្តិការប្រើប្រាស់។</span>
+                            <span class="text-english">Click <strong>Users > Usage History</strong> in the sidebar to view usage history.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">ជ្រើសរើសរយៈពេល</span>
+                            <span class="content-english">Select Time Period</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ជ្រើសរើសរយៈពេលដែលអ្នកចង់មើលប្រវត្តិប្រើប្រាស់ ដូចជា៖ ថ្ងៃនេះ សប្តាហ៍នេះ ឬខែនេះ។</span>
+                            <span class="text-english">Select the time period you want to view usage history, such as: today, this week, or this month.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span class="content-khmer">មើលប្រវត្តិការប្រើប្រាស់</span>
+                            <span class="content-english">View Usage History</span>
+                        </h3>
+                        <p>
+                            <span class="text-khmer">ប្រព័ន្ធនឹងបង្ហាញប្រវត្តិការប្រើប្រាស់របស់អ្នកប្រើប្រាស់ ដូចជា៖</span>
+                            <span class="text-english">The system will display user usage history, such as:</span>
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="text-khmer">ពេលវេលាចូលប្រព័ន្ធ (Login Time)</span>
+                                <span class="text-english">Login time</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">ពេលវេលាចាកចេញ (Logout Time)</span>
+                                <span class="text-english">Logout time</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">មុខងារដែលបានប្រើ (Functions Used)</span>
+                                <span class="text-english">Functions used</span>
+                            </li>
+                            <li>
+                                <span class="text-khmer">សកម្មភាពផ្សេងៗ (Various Activities)</span>
+                                <span class="text-english">Various activities</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-card">
+                <div class="screenshot-header">
+                    <span class="screenshot-icon">📸</span>
+                    <h3 class="screenshot-title">
+                        <span class="title-khmer">ប្រវត្តិប្រើប្រាស់</span>
+                        <span class="title-english">Usage History</span>
+                    </h3>
+                </div>
+                <div class="screenshot-body">
+                    <div class="image-container">
+                        <img src="images/Untitled.png" alt="Usage History" class="screenshot-image" loading="lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-text">Click to enlarge / ចុចដើម្បីពង្រីក</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
